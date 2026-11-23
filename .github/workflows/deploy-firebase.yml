@@ -1,0 +1,44 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: write
+
+concurrency:
+  group: firebase-hosting
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Firebase Hosting (live channel)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Check for Firebase credentials
+        id: guard
+        env:
+          SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          if [ -n "$SA" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+            echo "✅ FIREBASE_SERVICE_ACCOUNT found — deploying."
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=Firebase deploy skipped::Add repo secret FIREBASE_SERVICE_ACCOUNT (service account JSON) to enable Firebase Hosting deploys."
+          fi
+
+      - name: Deploy to Firebase Hosting
+        if: steps.guard.outputs.ok == 'true'
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: mizanoraorg
+          channelId: live

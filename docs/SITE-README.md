@@ -17,13 +17,30 @@ timeline, aur GitHub suspension incident ki poori detail. Firebase-powered + Git
 | 🤝 Team | Members add/manage — naam, role, bio, links, contact |
 | 🖼️ Media | Images / videos / audio — Firebase Storage upload + URL |
 | 👤 About Muaaz | Personality, timeline, gallery, quotes, numbers |
-| ⚙️ Admin Panel | Google Sign-In (owner-only: muaaziqbal.vip@gmail.com) |
+| ⚙️ Admin Panel | Google Sign-In (owner-only: mezanora.market@gmail.com) |
 | 💾 Backup | Full JSON export/import (Google Drive par rakhein) |
 | 🗺️ Auto Sitemap | Admin se generate → sitemap.xml download/copy |
 | 🔍 SEO | JSON-LD (Person/Organization/WebSite), OG tags, robots.txt, **llms.txt** (AI search) |
 | 📦 PWA | manifest.json — phone par install ho sakti hai |
 
-## 🚀 Deploy — GitHub Pages (2 minute)
+## 🚀 Deploy — GitHub Pages + Firebase Hosting
+
+> Repo me dono targets tayyar hain: `.github/workflows/deploy-pages.yml` aur
+> `.github/workflows/deploy-firebase.yml` + `firebase.json` / `.firebaserc`.
+> Site: https://muaaz-iqbal.github.io/MIZANORAORG/ · Mirror: https://mizanoraorg.web.app
+
+### Firebase Hosting (manual)
+
+```bash
+npm i -g firebase-tools
+firebase login                     # mezanora.market@gmail.com
+firebase use mizanoraorg
+firebase deploy --only hosting
+```
+
+Auto-deploy ke liye repo secret `FIREBASE_SERVICE_ACCOUNT` (service account JSON) add karein.
+
+### GitHub Pages (purana tareeqa)
 
 1. Is folder ko repo me push karein:
    ```bash

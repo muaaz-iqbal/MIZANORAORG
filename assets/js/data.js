@@ -5,7 +5,7 @@
    Security Firestore RULES se aati hai — firestore.rules deploy karein.
    ============================================================ */
 window.MZ = {
-  OWNER_EMAIL: "muaaziqbal.vip@gmail.com",
+  OWNER_EMAIL: "mezanora.market@gmail.com",
   OWNER_NAME: "Muaaz Iqbal",
   // ⬇️ GitHub Pages par deploy ke baad ye URL badlein (repo ka real URL)
   SITE_URL: "https://muaaz-iqbal.github.io/MIZANORAORG",
@@ -139,7 +139,7 @@ window.MZ = {
         stack: ["Node.js", "Firebase", "Vercel", "Xtream Codes", "MAG/Stalker"],
         started: "2026", updated: "2026-11",
         story: "Live TV, animated welcome intro, M3U imports, XMLTV guides, Xtream Codes, MAG/Stalker, owner admin, reseller workspace aur website integrations. v5 se v6.1.2 tak: reseller panel (registration, credits, clients, renew/suspend/delete, pricing, payment ledger, key rotation). 183+ integration tests pass.",
-        how: "Owner control → reseller workspace → client service architecture. Real HTTP test suites (imports, EPG, Xtream, signed playback, MAG). Admin-only private panel: Google owner lock (muaaziqbal.vip@gmail.com), emerald+gold glass theme.",
+        how: "Owner control → reseller workspace → client service architecture. Real HTTP test suites (imports, EPG, Xtream, signed playback, MAG). Admin-only private panel: Google owner lock (mezanora.market@gmail.com), emerald+gold glass theme.",
         incident: "Mizanoraorg/miznaoraiptv repo me mehfooz (3 Nov 2026 tak push).",
         links: [{ label: "Repo (org)", url: "https://github.com/Mizanoraorg/miznaoraiptv" }],
         metrics: "v6.1.2 · 183+ tests · reseller economy"
@@ -352,7 +352,7 @@ Admin Panel → **Backup** tab → "Export JSON" — saara content (blogs, proje
 
     /* ---------- TEAM / MEMBERS ---------- */
     team: [
-      { id: "t1", name: "Muaaz Iqbal", role: "Founder & Lead Developer", bio: "Full-stack & Android developer, AI orchestrator, founder of Mizanora. Kasur, Punjab, Pakistan. 'Unchi soch. Chhote qadam.'", links: { github: "https://github.com/muaaziqbalvip", youtube: "https://youtube.com/@MuaazIqbalofficial", x: "https://x.com/MizanoraApps", instagram: "https://instagram.com/mizanora" }, email: "muaaziqbal.vip@gmail.com", phone: "+92 306 2015326" },
+      { id: "t1", name: "Muaaz Iqbal", role: "Founder & Lead Developer", bio: "Full-stack & Android developer, AI orchestrator, founder of Mizanora. Kasur, Punjab, Pakistan. 'Unchi soch. Chhote qadam.'", links: { github: "https://github.com/muaaziqbalvip", youtube: "https://youtube.com/@MuaazIqbalofficial", x: "https://x.com/MizanoraApps", instagram: "https://instagram.com/mizanora" }, email: "mezanora.market@gmail.com", phone: "+92 306 2015326" },
       { id: "t2", name: "Arena AI Agent", role: "Development Partner", bio: "AI development collaborator — code, audits, PRs (v39–v55, v47 billing, IPTV suites) me co-author.", links: {}, email: "", phone: "" },
       { id: "t3", name: "Muslim Islam Org Team", role: "Community", bio: "Community portal team — directory, project hub, chat relay, tools.", links: {}, email: "", phone: "" },
       { id: "t4", name: "Mizanora Resellers Network", role: "Partners", bio: "Worker/reseller programme ke members — personal links, wallets, IPTV resellers.", links: {}, email: "", phone: "" }

@@ -10,7 +10,7 @@
 - **Role:** Founder & Lead Developer, Mizanora; creator of Asaan Lang.
 - **Education:** ICS (Computer Science), Islamia Graduate College.
 - **Motto:** "Unchi soch. Chhote qadam." (High thinking, small steps.)
-- **Contact:** muaaziqbal.vip@gmail.com · WhatsApp +92 306 2015326.
+- **Contact:** mezanora.market@gmail.com · WhatsApp +92 306 2015326.
 - **Organization:** Mizanora (Mizan = balance, Noor = illumination) — digital infrastructure, halal e-commerce, ethical AI.
 
 ## Flagship projects (2–3 years of work)
@@ -34,6 +34,12 @@ Likely cause: heavy GitHub Actions 24/7 automation (2026 abuse-detection wave). 
 - [Blog](https://muaaz-iqbal.github.io/MIZANORAORG/blog.html): stories, tutorials, news (templates)
 - [Team](https://muaaz-iqbal.github.io/MIZANORAORG/team.html): members
 - [About Muaaz Iqbal](https://muaaz-iqbal.github.io/MIZANORAORG/about.html): profile, timeline, media gallery
+
+## Hosting
+- Primary (canonical): https://muaaz-iqbal.github.io/MIZANORAORG/
+- Mirror (Firebase Hosting): https://mizanoraorg.web.app
+- Source: https://github.com/muaaz-iqbal/MIZANORAORG
+- Owner / admin account: mezanora.market@gmail.com (owner-only Google Sign-In)
 
 ## Official links
 - GitHub org (surviving): https://github.com/Mizanoraorg

@@ -32,7 +32,7 @@ Education:       ICS (Computer Science), Islamia Graduate College
 Role:            Full-stack & Android developer, AI orchestrator, founder of Mizanora & Muslim Islam Org
 Focus:           Urdu-first products, AI agents, streaming infrastructure, education tools
 Motto:           "Unchi soch. Chhote qadam." — high thinking, small steps
-Email:           muaaziqbal.vip@gmail.com
+Email:           mezanora.market@gmail.com
 WhatsApp:        +92 306 2015326
 Website:         mizanora.vercel.app (NOTE: 23 Nov 2026 ko 402 mila — hosting issue check karein)
 GitHub:          github.com/muaaziqbalvip (⚠️ SUSPENDED Nov 2026 — see incident)
@@ -201,7 +201,7 @@ const firebaseConfig = {
    Blog covers, about-page gallery. Muaaz Iqbal ki images gallery me admin se add.
 5. **Team/Members** — her member add/manage — naam, role, bio, links, contact. Google me searchable.
 6. **About Muaaz Iqbal** — personality, poori detail, timeline (her date + incident), quotes, numbers.
-7. **Admin Panel** — Google Sign-In, **owner-only** (muaaziqbal.vip@gmail.com). Dashboard, status,
+7. **Admin Panel** — Google Sign-In, **owner-only** (mezanora.market@gmail.com). Dashboard, status,
    blogs (templates), projects, team, media, **backup (JSON export/import)**, **sitemap generator**.
 8. **Firebase** — Auth (Google), Firestore (status/blogs/projects/team/timeline/gallery), Storage
    (media). Owner-only WRITE rules (firestore.rules). Offline fallback (seed + localStorage).

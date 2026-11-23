@@ -1,6 +1,6 @@
 /* ============================================================
    MIZANORA PLATFORM — Admin Panel logic
-   Owner-only: muaaziqbal.vip@gmail.com (Google Sign-In)
+   Owner-only: mezanora.market@gmail.com (Google Sign-In)
    ============================================================ */
 import { Store } from "./store.js";
 
