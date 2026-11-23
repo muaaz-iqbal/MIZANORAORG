@@ -7,7 +7,7 @@
 <br />
 
 <a href="https://muaaz-iqbal.github.io/MIZANORAORG/"><img src="https://img.shields.io/badge/🌐_LIVE_SITE-Open-10b981?style=for-the-badge&labelColor=05100b" alt="Live site" /></a>
-<a href="https://muaaz-iqbal.github.io/MIZANORAORG/projects.html"><img src="https://img.shields.io/badge/🚀_PROJECTS-18_builds-d4af37?style=for-the-badge&labelColor=05100b" alt="Projects" /></a>
+<a href="https://muaaz-iqbal.github.io/MIZANORAORG/projects.html"><img src="https://img.shields.io/badge/🚀_PROJECTS-17_builds-d4af37?style=for-the-badge&labelColor=05100b" alt="Projects" /></a>
 <a href="https://muaaz-iqbal.github.io/MIZANORAORG/blog.html"><img src="https://img.shields.io/badge/✍️_BLOG-Stories_&_guides-34d399?style=for-the-badge&labelColor=05100b" alt="Blog" /></a>
 <a href="https://github.com/muaaz-iqbal"><img src="https://img.shields.io/badge/GitHub-muaaz--iqbal-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=05100b" alt="GitHub" /></a>
 
@@ -25,7 +25,7 @@
 ## ⚖️ Mizanora Platform kya hai?
 
 **Mizanora** (*Mizan* = balance, *Noor* = illumination) — **Muaaz Iqbal** ka pura digital record, ek hi website par.
-Yeh koi demo nahi hai: taqreeban **2–3 saal ka kaam**, **18 projects**, aur unke saath juda har waqia — kya bana,
+Yeh koi demo nahi hai: taqreeban **2–3 saal ka kaam**, **17 projects**, aur unke saath juda har waqia — kya bana,
 kis date push hua, kya stack laga, aur kya hadsa pesh aaya.
 
 > **"Unchi soch. Chhote qadam."** — Muaaz Iqbal · Kasur, Punjab, Pakistan 🇵🇰
@@ -76,7 +76,7 @@ GitHub ki abuse policy *"Actions for general computing purposes"* ke khilaaf. 20
 | Feature | Detail |
 | --- | --- |
 | 📌 **Status Feed** | "Mizanora abhi kya kar raha hai" — home page ticker + dated feed, tags: `build` · `release` · `incident` · `note` |
-| 🚀 **Projects (18)** | Active / Past / Suspension-affected — har project ki **story, stack, dates, metrics aur incident detail** + filter + detail modal |
+| 🚀 **Projects (17)** | Active / Past / Suspension-affected — har project ki **story, stack, dates, metrics aur incident detail** + filter + detail modal |
 | ✍️ **Blog engine** | 4 templates — `update` · `tutorial` · `story` · `news` · markdown-lite rendering (`##`, `**bold**`, `` `code` ``, lists, tables) + `?slug=` deep links |
 | 🤝 **Team / Members** | Add & manage members — naam, role, bio, links (GitHub/YouTube/X/IG), email, WhatsApp |
 | 🖼️ **Media Gallery** | Images / video / audio — URL se ya Firebase Storage upload, captions ke saath |
@@ -96,7 +96,7 @@ GitHub ki abuse policy *"Actions for general computing purposes"* ke khilaaf. 20
 | Page | URL | Kya milega |
 | --- | --- | --- |
 | 🏠 Home | [`/`](https://muaaz-iqbal.github.io/MIZANORAORG/) | Hero, stats, status ticker, featured projects, latest blogs |
-| 🚀 Projects | [`/projects.html`](https://muaaz-iqbal.github.io/MIZANORAORG/projects.html) | Saare 18 projects — filters (Active / Past / Affected) + modal detail |
+| 🚀 Projects | [`/projects.html`](https://muaaz-iqbal.github.io/MIZANORAORG/projects.html) | Saare 17 projects — filters (Active / Past / Affected) + modal detail |
 | ✍️ Blog | [`/blog.html`](https://muaaz-iqbal.github.io/MIZANORAORG/blog.html) | 5 seed articles — incident, Asaan Lang, founder story, backup guide, ecosystem map |
 | 🤝 Team | [`/team.html`](https://muaaz-iqbal.github.io/MIZANORAORG/team.html) | Members + contact links |
 | 👤 About | [`/about.html`](https://muaaz-iqbal.github.io/MIZANORAORG/about.html) | Muaaz Iqbal — profile, timeline, gallery, numbers |
@@ -136,7 +136,7 @@ Yeh **zero-build** hai — koi bundler, koi `npm install`, koi framework nahi. S
 
 | Module | Lines | Zimmedari |
 | --- | ---: | --- |
-| `assets/js/data.js` | ~380 | `SITE_URL`, Firebase config, **seed content** (status, 18 projects, 5 blogs, team, timeline, gallery) |
+| `assets/js/data.js` | ~380 | `SITE_URL`, Firebase config, **seed content** (status, 17 projects, 5 blogs, team, timeline, gallery) |
 | `assets/js/store.js` | ~165 | Data layer — `init · list · save · remove · signInGoogle · signOut · uploadFile · exportAll · importAll` |
 | `assets/js/main.js` | ~397 | Page rendering, nav, ticker, filters, modals, markdown-lite |
 | `assets/js/admin.js` | ~392 | Admin dashboard, forms, CRUD, upload, JSON backup, sitemap generator |
@@ -152,7 +152,7 @@ Yeh **zero-build** hai — koi bundler, koi `npm install`, koi framework nahi. S
 ```text
 MIZANORAORG/
 ├── index.html              # 🏠 Home — hero, stats, status feed, featured
-├── projects.html           # 🚀 18 projects + filters + detail modal
+├── projects.html           # 🚀 17 projects + filters + detail modal
 ├── blog.html               # ✍️ Blog list + ?slug= article view
 ├── team.html               # 🤝 Members & contacts
 ├── about.html              # 👤 Muaaz Iqbal — profile, timeline, gallery
@@ -265,7 +265,7 @@ python3 -m http.server 8080   # same files jo Pages par jaate hain
 
 ---
 
-## 🧩 Mizanora ecosystem — 18 projects
+## 🧩 Mizanora ecosystem — 17 projects
 
 **Status legend:** 🟢 `active` · 🟡 `affected` (suspension ke baad recovery) · ⚪ `past`
 
@@ -288,8 +288,9 @@ python3 -m http.server 8080   # same files jo Pages par jaate hain
 | 15 | 📦 **Order Tracking** | Commerce | 🟢 | Serverless · PWA · SEO | Animated parcel journey — estimated vs real data, imaandari se label |
 | 16 | 🎞️ **Minexus TV** | Streaming | ⚪ | JS · TMDB · Vercel | Streaming front end — releases, calendar, guest mode (no login) |
 | 17 | 📱 **MiTV Player** | Android | ⚪ | Kotlin · Compose · Media3 | IPTV player — 4 themes, gesture controls, auto-retry |
-| 18 | 🏢 **Mizanora Org** | Platform | 🟢 | GitHub org | Bachi hui repos ka ghar — `MIZANORA`, `MIZANORAAI`, `miznaoraiptv` |
 
+> **+ 4 surviving repos** in the org (`MIZANORA` · `MIZANORAAI` · `miznaoraiptv` · `Mizanora-org`) — suspension ke baad bacha hua ghar.
+>
 > Har project ka full story + incident detail: **[projects.html](https://muaaz-iqbal.github.io/MIZANORAORG/projects.html)**
 > · AI/LLM ke liye summary: **[`llms.txt`](llms.txt)**
 
