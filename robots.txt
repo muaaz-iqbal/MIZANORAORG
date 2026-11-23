@@ -19,3 +19,4 @@ User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://muaaz-iqbal.github.io/MIZANORAORG/sitemap.xml
+Sitemap: https://mizanoraorg.web.app/sitemap.xml

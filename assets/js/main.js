@@ -73,7 +73,7 @@ function injectChrome() {
   if (header) header.innerHTML = `
     <div class="container nav-row">
       <a class="brand" href="index.html">
-        <div class="brand-logo">⚖️</div>
+        <div class="brand-logo"><img src="assets/img/logo-64.png" width="38" height="38" alt="Mizanora logo" decoding="async"></div>
         <div>Mizanora<small>Platform · Muaaz Iqbal</small></div>
       </a>
       <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
@@ -88,7 +88,7 @@ function injectChrome() {
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h4>⚖️ Mizanora Platform</h4>
+          <h4 class="foot-brand"><img src="assets/img/logo-64.png" width="24" height="24" alt="" aria-hidden="true"> Mizanora Platform</h4>
           <p>Mizan (balance) + Noor (illumination). Pakistan-based digital infrastructure, halal e-commerce aur ethical AI — founded by <b>Muaaz Iqbal</b>, Kasur, Punjab.</p>
           <p>“Unchi soch. Chhote qadam.”</p>
         </div>
@@ -117,7 +117,7 @@ function injectChrome() {
       </div>
       <div class="footer-bottom">
         <span>© ${new Date().getFullYear()} Mizanora · Kasur, Punjab, Pakistan. Built & maintained by Muaaz Iqbal.</span>
-        <span>Mode: <b id="store-mode">…</b> · <a href="sitemap.xml">sitemap</a> · <a href="llms.txt">llms.txt</a></span>
+        <span>Mode: <b id="store-mode">…</b> · <a href="sitemap.xml">sitemap</a> · <a href="rss.xml">rss</a> · <a href="llms.txt">llms.txt</a> · <a href="admin.html">admin</a></span>
       </div>
     </div>`;
 }
@@ -201,8 +201,10 @@ function projectCardHTML(p) {
 function blogCardHTML(b) {
   return `
     <div class="card blog-card" data-slug="${esc(b.slug)}">
-      <div class="blog-cover" ${b.cover ? `style="background-image:linear-gradient(135deg, rgba(16,185,129,0.35), rgba(212,175,55,0.28)), url('${esc(b.cover)}')"` : ""}>
-        ${b.cover ? "" : "✍️"}
+      <div class="blog-cover">
+        ${b.cover
+          ? `<img src="${esc(b.cover)}" alt="${esc(b.title)}" loading="lazy" decoding="async">`
+          : `<span class="cover-fallback">✍️</span>`}
       </div>
       <div class="blog-meta">
         <span class="badge badge-gold">${esc(b.template || "blog")}</span>
@@ -300,6 +302,7 @@ async function renderBlog() {
     if (b) {
       document.title = `${b.title} — Mizanora Blog`;
       articleEl.innerHTML = `
+        ${b.cover ? `<figure class="article-cover"><img src="${esc(b.cover)}" alt="${esc(b.title)}" loading="lazy" decoding="async"></figure>` : ""}
         <div class="blog-meta" style="justify-content:center">
           <span class="badge badge-gold">${esc(b.template || "blog")}</span>
           <span>${fmtDate(b.date)}</span><span>· ${esc(b.author || "Mizanora Team")}</span>

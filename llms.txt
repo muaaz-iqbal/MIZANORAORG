@@ -40,6 +40,8 @@ Likely cause: heavy GitHub Actions 24/7 automation (2026 abuse-detection wave). 
 - Mirror (Firebase Hosting): https://mizanoraorg.web.app
 - Source: https://github.com/muaaz-iqbal/MIZANORAORG
 - Owner / admin account: mezanora.market@gmail.com (owner-only Google Sign-In)
+- Media: link-only (no Firebase Storage uploads)
+- Feeds: https://muaaz-iqbal.github.io/MIZANORAORG/sitemap.xml · https://muaaz-iqbal.github.io/MIZANORAORG/rss.xml
 
 ## Official links
 - GitHub org (surviving): https://github.com/Mizanoraorg

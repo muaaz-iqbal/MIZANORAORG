@@ -23,6 +23,7 @@ window.MZ = {
   SEED: {
     /* ---------- STATUS FEED (Mizanora kya kar raha hai) ---------- */
     status: [
+      { id: "s0", date: "2026-11-23", tag: "release", text: "Platform v2 live — official gold mark, 10 blogs with generated covers, auto-sitemap, media as links, aur dual hosting (GitHub Pages + Firebase Hosting)." },
       { id: "s1", date: "2026-11-23", tag: "incident", text: "GitHub account @muaaziqbalvip suspend — 90 repos (2–3 saal ki mehnat) 404. Recovery + backup drive jaari. Kuch kaam Mizanoraorg org me mehfooz hai." },
       { id: "s2", date: "2026-11-16", tag: "build", text: "MIZANORA main project par naya push (v59.2 restore ke baad stabilization). Mizanoraorg org me active development jaari." },
       { id: "s3", date: "2026-11-13", tag: "build", text: "MIZANORAAI update — AI features ka agla iteration." },
@@ -205,7 +206,7 @@ window.MZ = {
       {
         slug: "github-suspension-incident-2026", title: "Kya Hua: GitHub Account Suspension — Poori Kahani", template: "news",
         category: "Incident", date: "2026-11-23", author: "Mizanora Team",
-        cover: "", tags: ["GitHub", "incident", "backup", "recovery"],
+        cover: "assets/img/blog/incident.jpg", tags: ["GitHub", "incident", "backup", "recovery"],
         excerpt: "2–3 saal ki mehnat, 90 repos — ek hi jhatke me 404. Kya hua, kyun hua, aur ab kya kar rahe hain.",
         content: `## Kya hua?
 **November 2026** me Muaaz Iqbal ka personal GitHub account **@muaaziqbalvip** suspend kar diya gaya. Profile, saari public repositories (90 repos, 13.7 MB code), web pages — sab **404**. 30 October 2026 tak profile README normal tha (last refresh date), matlab incident uske baad hua.
@@ -236,7 +237,7 @@ window.MZ = {
       {
         slug: "asaan-lang-intro", title: "Asaan Lang: Soch Urdu Mein, Code Roman-Urdu Mein", template: "tutorial",
         category: "Language", date: "2026-10-12", author: "Muaaz Iqbal",
-        cover: "", tags: ["Asaan Lang", "programming", "education", "Pakistan"],
+        cover: "assets/img/blog/asaan-lang.jpg", tags: ["Asaan Lang", "programming", "education", "Pakistan"],
         excerpt: "Pakistan ki apni programming language — 30 second me samjhein, phir khud likhein.",
         content: `## Asaan Lang kya hai?
 Python seekhne se pehle aksar **English** seekhni padti hai. Asaan Lang pehle **soch** seekhati hai — variables, loops, decisions — apni zubaan mein. Jab dimagh ready ho, Python asaan lagti hai.
@@ -267,7 +268,7 @@ asaan --studio           # playground
       {
         slug: "founder-story-muaaz-iqbal", title: "Muaaz Iqbal: Kasur Se Mizanora Tak", template: "story",
         category: "Founder", date: "2026-10-30", author: "Mizanora Team",
-        cover: "", tags: ["Muaaz Iqbal", "founder", "Kasur", "story"],
+        cover: "assets/img/blog/founder.jpg", tags: ["Muaaz Iqbal", "founder", "Kasur", "story"],
         excerpt: "2009 me paida hone wale ek larkay ne saste phone par duniya bhar ke platforms banaye. 'Unchi soch. Chhote qadam.'",
         content: `## Shuruaat
 **Muaaz Iqbal** — Kasur, Punjab, Pakistan. Born 27 November 2009. ICS (Computer Science), Islamia Graduate College. Motto: *"Unchi soch. Chhote qadam."* — high thinking, small steps.
@@ -289,7 +290,7 @@ GitHub suspension 2026 ek bada hadsa tha — lekin Mizanora ka record ab is plat
       {
         slug: "backup-guide-2026", title: "Har Project Ka Backup: Zaroori Guide", template: "tutorial",
         category: "Guide", date: "2026-11-23", author: "Mizanora Team",
-        cover: "", tags: ["backup", "git", "guide", "safety"],
+        cover: "assets/img/blog/backup.jpg", tags: ["backup", "git", "guide", "safety"],
         excerpt: "Ek account suspend — saari mehnat gayab. Aisa na ho, isliye ye backup routine apnayein.",
         content: `## Rule #1: Ek jagah kabhi backup nahi
 GitHub account suspend ho sakta hai (2026 me ye waqai hua — Muaaz Iqbal ke 90 repos ek jhatke me 404). Isliye:
@@ -320,7 +321,7 @@ Admin Panel → **Backup** tab → "Export JSON" — saara content (blogs, proje
       {
         slug: "mizanora-ecosystem-map", title: "Mizanora Ecosystem: Her Project Ka Naqsha", template: "update",
         category: "Ecosystem", date: "2026-11-20", author: "Mizanora Team",
-        cover: "", tags: ["Mizanora", "ecosystem", "projects"],
+        cover: "assets/img/blog/ecosystem.jpg", tags: ["Mizanora", "ecosystem", "projects"],
         excerpt: "Mizanora kya hai? Store, language, TV, AI, trading, Islamic tools — poora naqsha ek jagah.",
         content: `## Ecosystem Map
 **Mizanora** (Mizan = balance, Noor = illumination) — Pakistan-based digital infrastructure, halal e-commerce aur ethical AI.
@@ -347,7 +348,42 @@ Admin Panel → **Backup** tab → "Export JSON" — saara content (blogs, proje
 - **HijriAnchor**, Quran + Hadith, **Muslim Islam Org**
 
 *Her project ki detail — dates, stack, incidents — Projects page par maujood hai.*`
-      }
+      },
+      {
+        slug: "platform-v2-live", title: "Platform v2 Live: Naya Mark, 10 Blogs, Dual Hosting", template: "news",
+        category: "Release", date: "2026-11-23", author: "Mizanora Team",
+        cover: "assets/img/og-cover.jpg", tags: ["release", "platform", "branding", "firebase"],
+        excerpt: "Mizanora Platform ka bara upgrade — official gold mark, generated covers, 5 naye blogs, auto sitemap aur Firebase Hosting + GitHub Pages dono par live.",
+        content: "## Kya naya hai?\n\n**Platform v2** ek visual + technical upgrade hai — design bhi, infrastructure bhi.\n\n- **Official Mizanora mark** — gold M + sparkle, ab favicon, nav, PWA icon aur social card me\n- **10 blog articles** — incidents, tutorials, founder story, infra\n- **Generated cover art** — har article ka apna cinematic cover\n- **Auto sitemap** — har deploy par `sitemap.xml` khud ban jata hai\n- **Dual hosting** — GitHub Pages + Firebase Hosting (global CDN)\n- **Media = links only** — Firebase Storage nahi, koi bhi image/video/audio URL chalega\n\n## Kyun dual hosting?\n\n| Host | Faida |\n| --- | --- |\n| GitHub Pages | Free, git ke saath juda, kabhi bill nahi |\n| Firebase Hosting | Global edge CDN, instant cache purge, custom headers, preview channels |\n\nDono ek hi source se bante hain — `main` par push, dono jagah deploy.\n\n## Aage kya?\n\n- Urdu locale toggle\n- Project-wise detail pages (`/projects/<slug>`)\n- Recovery drive: suspended repos ka public archive\n\n> *Record apni website par. Copy apni drive par. Code apne git par.*"
+      },
+      {
+        slug: "firebase-hosting-dual-deploy", title: "Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar", template: "tutorial",
+        category: "Infra", date: "2026-11-22", author: "Muaaz Iqbal",
+        cover: "assets/img/blog/hosting.jpg", tags: ["firebase", "hosting", "github-pages", "devops"],
+        excerpt: "Ek hi static codebase ko GitHub Pages aur Firebase Hosting dono par deploy karna — bilkul free, bina VPS, bina bill ka darr.",
+        content: "## Kyun do jagah?\n\nNovember 2026 ka sabaq: **ek platform par sab kuch nahi**. GitHub account suspend ho sakta hai, Vercel bill 402 de sakta hai. Isliye site ka source git me, aur deploy **do independent hosts** par.\n\n## Setup (3 files)\n\n| File | Kaam |\n| --- | --- |\n| `firebase.json` | `public: \".\"`, ignore list, cache + security headers |\n| `.firebaserc` | default project ka naam |\n| `.github/workflows/deploy-firebase.yml` | push par live channel deploy |\n\n## Headers jo farq daalte hain\n\n```\n\"headers\": [\n  { \"source\": \"**/*.@(css|js|jpg|png|svg)\", \"headers\": [{ \"key\": \"Cache-Control\", \"value\": \"public, max-age=604800\" }] },\n  { \"source\": \"**/*.@(html|json|xml)\", \"headers\": [{ \"key\": \"Cache-Control\", \"value\": \"public, max-age=300\" }] }\n]\n```\n\nAssets ko hafta bhar cache, HTML ko 5 minute — isi liye site **fast** bhi lagti hai aur update bhi foran dikhta hai.\n\n## CI me credentials\n\n1. Firebase Console → *Project settings → Service accounts* → **Generate new private key**\n2. GitHub repo → *Settings → Secrets* → `FIREBASE_SERVICE_ACCOUNT` = poora JSON\n3. Workflow khud `live` channel par deploy kar dega\n\n## Preview channels (bonus)\n\nHar pull request ke liye temporary URL:\n\n```\nfirebase hosting:channel:deploy pr-12 --expires 7d\n```\n\nClient ko preview dikhana ho ya design compare karna ho — production ko chhue baghair.\n\n## Manual deploy\n\n```\nnpm i -g firebase-tools\nfirebase login\nfirebase use mizanoraorg\nfirebase deploy --only hosting,firestore:rules\n```\n\n> Rule: jo bhi deploy ho, **source git me** ho. Host badal sakta hai, history nahi."
+      },
+      {
+        slug: "noor-ai-urdu-first-assistant", title: "Noor AI: Urdu-First Assistant Kaise Sochta Hai", template: "update",
+        category: "AI", date: "2026-11-21", author: "Muaaz Iqbal",
+        cover: "assets/img/blog/noor-ai.jpg", tags: ["Noor AI", "Urdu", "AI", "product"],
+        excerpt: "'Sasta laal joota under 2k' — aisa messy Urdu sentence samajhna, keyword search se nahi hota. Noor AI ke design ke teen asool.",
+        content: "## Problem\n\nPakistan ke marketplaces me log aise likhte hain:\n\n> *\"sasta laal joota under 2k\"* · *\"bacha ke liye warm jacket 6 saal\"* · *\"khushbu jo 500 se kam ho\"*\n\nKeyword search yahan fail ho jata hai, kyunki **niyat** alfaaz me nahi, **sentence** me hoti hai.\n\n## Noor ke teen asool\n\n| # | Assool | Matlab |\n| --- | --- | --- |\n| 1 | **Niyat pehle, alfaaz baad me** | Sentence ko intent me parse karo — budget, rang, audience, category |\n| 2 | **Urdu-first, English bhi** | Roman Urdu aur English dono samjho, jawab user ki zubaan me |\n| 3 | **Imaandar jawab** | Agar exact match nahi hai to \"sasta alternative ye hai\" — jhooti listing nahi |\n\n## Example pipeline\n\n```\n\"Bhai 1500 me school bag chahiye\" \n   → intent: { category: bag, audience: school, budget: 1500 }\n   → filter: price <= 1500, stock > 0\n   → rank: rating, delivery speed, COD\n   → jawab: 3 options + ek honest note\n```\n\n## Kya nahi karte\n\n- **Fake reviews** generate nahi karte\n- **Clickbait price** nahi dikhate (jo cart me badal jaye)\n- User ka data kisi third party ko nahi bechte\n\n> *Noor ka matlab hi \"roshni\" hai — andhera nahi bechna.*"
+      },
+      {
+        slug: "iptv-reseller-suite-v6", title: "IPTV Reseller Suite v6.1.2 — Owner Se Client Tak Ka Safar", template: "update",
+        category: "Streaming", date: "2026-11-20", author: "Muaaz Iqbal",
+        cover: "assets/img/blog/streaming.jpg", tags: ["IPTV", "reseller", "streaming", "architecture"],
+        excerpt: "3-level economy: owner control → reseller workspace → client service. 183+ integration tests, signed playback, MAG/Stalker support.",
+        content: "## Architecture\n\n```\nOWNER  ──►  RESELLER  ──►  CLIENT\nadmin panel   credits,      playlist,\npricing,      clients,      EPG, app\nkeys          renewals      access\n```\n\nHar level ka apna panel hai — aur har level par **wahi rules** lagte hain: kaun kya dekh sakta hai, kitne devices, kab tak.\n\n## v6.1.2 me kya hai\n\n- Reseller registration + credits + clients (renew / suspend / delete)\n- Pricing engine + payment ledger\n- **Key rotation** (compromised key foran band)\n- M3U import, XMLTV EPG, Xtream Codes, MAG/Stalker\n- Signed playback URLs — link copy karke bahar nahi chalti\n- **183+ integration tests** (imports, EPG, Xtream, playback, admin)\n\n## Production lessons\n\n| Sabaq | Detail |\n| --- | --- |\n| Tests pehle | 183 tests ne 3 major regressions pakre |\n| Audit log | Kaun ne kya badla — har action ka record |\n| Graceful limits | 20 concurrent jobs ka cap document kiya, crash nahi |\n| Owner lock | Admin panel sirf owner Google account se khulta hai |\n\n> **v5 → v6.1.2** ka safar: reseller economy ko \"feature\" se \"business\" banane tak."
+      },
+      {
+        slug: "naye-developers-ke-liye-5-sabaq", title: "Naye Developers Ke Liye 5 Sabaq — Saste Phone Se Shuru", template: "tutorial",
+        category: "Guide", date: "2026-11-19", author: "Muaaz Iqbal",
+        cover: "assets/img/blog/founder.jpg", tags: ["beginners", "guide", "pakistan", "career"],
+        excerpt: "Na laptop, na bootcamp, na English perfection — sirf ek sasta phone aur zabardast zid. Wo 5 sabaq jo 90 repos banane ke baad samajh aaye.",
+        content: "## Sabaq 1 — Tool bahana nahi hota\n\nSab kuch **saste phone par** build aur test hua. Jo phone aapke paas hai, wohi aapka dev machine hai.\n\n- Editor: browser me hi (GitHub web editor, StackBlitz)\n- Deploy: free static hosts\n- Test: asli device, asli network speed\n\n## Sabaq 2 — Chhota ship karo, jaldi ship karo\n\nBara idea 3 mahine me nahi, **chhota slice 3 din me**. Feedback asli hota hai, imagination nahi.\n\n| Ghalat | Sahi |\n| --- | --- |\n| \"Poora app ready hone do\" | \"Ek page live karo, phir barhao\" |\n| \"Perfect design\" | \"Kaam karta hua design\" |\n\n## Sabaq 3 — Backup pehle din se\n\nEk account suspend = 90 repos 404. Ye guzra hua waqt hai, **aap ka future ho sakta hai**.\n\n```\ngit clone --mirror   → GitLab / Codeberg\ngit bundle create    → Google Drive\nJSON export          → weekly\n```\n\n## Sabaq 4 — English perfect nahi, logic perfect chahiye\n\nVariable ka naam `totalPrice` ho ya `total_qeemat` — chalega. Lekin **edge cases** theek hone chahiye: khali input, slow network, double tap.\n\n## Sabaq 5 — Imaandari feature hai\n\nFake data, fake reviews, fake \"guaranteed profit\" — inki umar chhoti hoti hai. Honest product slow chalta hai, lekin **rukta nahi**.\n\n> *\"Unchi soch. Chhote qadam.\"* — Kasur se, 2009 se, abhi tak."
+      },
     ],
 
     /* ---------- TEAM / MEMBERS ---------- */
@@ -373,8 +409,11 @@ Admin Panel → **Backup** tab → "Export JSON" — saara content (blogs, proje
 
     /* ---------- GALLERY (admin se media add hota hai) ---------- */
     gallery: [
-      { id: "g1", type: "image", url: "", caption: "Muaaz Iqbal — Founder, Mizanora (admin panel se image add karein)", date: "2026-11-23" },
-      { id: "g2", type: "image", url: "", caption: "Mizanora Ecosystem banner (admin panel se add karein)", date: "2026-11-23" }
+      { id: "g1", type: "image", url: "assets/img/og-cover.jpg", caption: "Mizanora — official mark (brand cover)", date: "2026-11-23" },
+      { id: "g2", type: "image", url: "assets/img/blog/ecosystem.jpg", caption: "Mizanora ecosystem — ek naqsha", date: "2026-11-23" },
+      { id: "g3", type: "image", url: "assets/img/blog/streaming.jpg", caption: "Streaming stack — 800 channels", date: "2026-11-23" },
+      { id: "g4", type: "image", url: "assets/img/blog/founder.jpg", caption: "Kasur, Punjab — jahan se shuru hua", date: "2026-11-23" },
+      { id: "g5", type: "image", url: "assets/img/blog/noor-ai.jpg", caption: "Noor AI — Urdu-first assistant", date: "2026-11-23" }
     ]
   }
 };

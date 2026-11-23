@@ -21,6 +21,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate SEO files
+        run: node scripts/generate-seo.mjs
+
       - name: Check for Firebase credentials
         id: guard
         env:

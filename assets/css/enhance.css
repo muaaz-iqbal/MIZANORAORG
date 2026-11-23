@@ -1,0 +1,221 @@
+/* ============================================================
+   MIZANORA PLATFORM — enhancement layer (v2)
+   Brand mark, motion, image treatments, micro-interactions.
+   Loaded AFTER style.css — safe to override, never destructive.
+   ============================================================ */
+
+/* ---------- brand mark ---------- */
+.brand-logo {
+  background: radial-gradient(circle at 35% 25%, rgba(240, 217, 122, 0.28), rgba(6, 13, 10, 0.9));
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.12), 0 8px 24px -10px rgba(212, 175, 55, 0.75);
+  overflow: hidden;
+  padding: 0;
+  transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s;
+}
+.brand-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.brand:hover .brand-logo {
+  transform: rotate(-6deg) scale(1.06);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.5), 0 12px 32px -8px rgba(240, 217, 122, 0.9);
+}
+.brand { letter-spacing: .2px; }
+.brand small { color: var(--muted); }
+
+.foot-brand { display: flex; align-items: center; gap: 9px; }
+.foot-brand img { border-radius: 7px; border: 1px solid rgba(212, 175, 55, .35); }
+
+/* header gains depth on scroll */
+.site-header.scrolled {
+  backdrop-filter: blur(16px);
+  background: rgba(6, 13, 10, .82);
+  border-bottom: 1px solid rgba(212, 175, 55, .18);
+  box-shadow: 0 12px 40px -24px #000;
+}
+
+/* ---------- hero mark ---------- */
+.hero-mark {
+  display: block;
+  width: clamp(86px, 13vw, 124px);
+  height: auto;
+  margin: 0 auto 22px;
+  border-radius: 26px;
+  border: 1px solid rgba(212, 175, 55, .4);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, .1), 0 28px 70px -30px rgba(240, 217, 122, .95);
+  animation: markFloat 7s ease-in-out infinite;
+}
+@keyframes markFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(-1.2deg); }
+}
+
+/* headline shimmer for the gold words */
+.hero h1 .shine,
+.gold-shine {
+  background: linear-gradient(100deg, var(--gold) 0%, #fff6d5 28%, var(--gold2) 46%, var(--gold) 62%, #fff6d5 82%, var(--gold) 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: goldSlide 8s ease-in-out infinite;
+}
+@keyframes goldSlide { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+/* section headings get a gold rule */
+.section-head h2::after,
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 58px; height: 3px; margin-top: 12px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+/* ---------- cards ---------- */
+.card {
+  transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s, box-shadow .4s;
+  position: relative;
+  overflow: hidden;
+}
+.card::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(212, 175, 55, .10), transparent 60%);
+  opacity: 0; transition: opacity .4s; pointer-events: none;
+}
+.card:hover { transform: translateY(-5px); border-color: var(--border-strong); box-shadow: 0 28px 60px -34px rgba(16, 185, 129, .55); }
+.card:hover::after { opacity: 1; }
+
+.project-card .icon, .icon { transition: transform .45s ease; }
+.card:hover .icon { transform: scale(1.08) rotate(-4deg); }
+
+/* ---------- blog covers (real <img>) ---------- */
+.blog-cover {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, rgba(16, 185, 129, .22), rgba(212, 175, 55, .18));
+  display: grid; place-items: center;
+  margin-bottom: 14px;
+}
+.blog-cover img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .8s cubic-bezier(.2,.8,.2,1), filter .5s;
+  filter: saturate(.95) contrast(1.03);
+}
+.blog-cover::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(6, 13, 10, .55));
+  opacity: .55; transition: opacity .5s;
+}
+.blog-card:hover .blog-cover img { transform: scale(1.07); filter: saturate(1.1) contrast(1.06); }
+.blog-card:hover .blog-cover::after { opacity: .2; }
+.blog-cover .cover-fallback { font-size: 2rem; opacity: .6; }
+
+/* article hero cover */
+.article-cover {
+  margin: 0 auto 30px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 940px;
+  position: relative;
+}
+.article-cover::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 55%;
+  background: linear-gradient(180deg, transparent, rgba(6, 13, 10, .82));
+  pointer-events: none;
+}
+.article-cover img { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+
+/* ---------- gallery ---------- */
+.media-card { overflow: hidden; border-radius: var(--radius-sm); }
+.media-card img { transition: transform .7s cubic-bezier(.2,.8,.2,1); width: 100%; display: block; }
+.media-card:hover img { transform: scale(1.06); }
+
+/* ---------- buttons: shine sweep ---------- */
+.btn { position: relative; overflow: hidden; }
+.btn::before {
+  content: ""; position: absolute; top: 0; left: -120%;
+  width: 60%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .35), transparent);
+  transform: skewX(-18deg);
+  transition: left .6s ease;
+}
+.btn:hover::before { left: 130%; }
+
+/* ---------- timeline ---------- */
+.tl-item { transition: transform .4s ease, border-color .4s; }
+.tl-item:hover { transform: translateX(4px); border-color: var(--border-strong); }
+.tl-item .tl-date { letter-spacing: .12em; text-transform: uppercase; font-size: .68rem; color: var(--gold); }
+
+/* ---------- reveal on scroll (JS adds .mz-ready) ---------- */
+.mz-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.mz-ready [data-reveal].mz-in { opacity: 1; transform: none; }
+
+/* ---------- share bar ---------- */
+.share-bar {
+  display: flex; gap: 10px; justify-content: center; align-items: center;
+  margin: 34px auto 0; flex-wrap: wrap;
+}
+.share-bar button, .share-bar a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--card);
+  color: var(--text); font: inherit; font-size: .86rem; cursor: pointer;
+  transition: .3s;
+}
+.share-bar button:hover, .share-bar a:hover {
+  border-color: var(--border-strong);
+  background: rgba(212, 175, 55, .1);
+  transform: translateY(-2px);
+}
+
+/* ---------- misc polish ---------- */
+::selection { background: rgba(212, 175, 55, .3); color: #fff; }
+html { scrollbar-color: rgba(212, 175, 55, .45) #060d0a; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #060d0a; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(212, 175, 55, .65), rgba(16, 185, 129, .55));
+  border-radius: 8px;
+}
+img { max-width: 100%; }
+.badge-gold { box-shadow: inset 0 0 0 1px rgba(212, 175, 55, .18); }
+
+/* images that fail to load get a graceful placeholder */
+img.mz-broken {
+  background: linear-gradient(135deg, rgba(16, 185, 129, .25), rgba(212, 175, 55, .22));
+  min-height: 120px;
+}
+
+/* back-to-top */
+.mz-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 90;
+  width: 46px; height: 46px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1px solid var(--border-strong);
+  background: rgba(10, 23, 18, .9);
+  color: var(--gold);
+  cursor: pointer; font-size: 18px;
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: .35s; backdrop-filter: blur(10px);
+}
+.mz-top.show { opacity: 1; pointer-events: auto; transform: none; }
+.mz-top:hover { box-shadow: 0 12px 30px -12px rgba(212, 175, 55, .8); }
+
+@media (max-width: 640px) {
+  .hero-mark { width: 82px; border-radius: 20px; }
+  .article-cover { border-radius: var(--radius-sm); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-mark, .gold-shine, .hero h1 .shine { animation: none !important; }
+  .mz-ready [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .card:hover, .blog-card:hover .blog-cover img { transform: none !important; }
+  html { scroll-behavior: auto; }
+}

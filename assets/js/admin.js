@@ -250,21 +250,16 @@ async function loadMedia() {
 $("#md-save").addEventListener("click", async () => {
   const type = $("#md-type").value;
   const caption = $("#md-caption").value.trim();
-  const file = $("#md-file").files[0];
-  let url = $("#md-url").value.trim();
-  try {
-    if (file) {
-      toast("Uploading… (internet zaroori hai)");
-      url = await Store.uploadFile(file, `gallery/${Date.now()}_${file.name}`);
-    }
-    if (!url) { toast("File ya URL dono me se ek zaroori hai"); return; }
-    await Store.save("gallery", uid("g"), { type, url, caption, date: today() });
-    toast("✅ Media save ho gaya");
-    $("#md-file").value = ""; $("#md-url").value = ""; $("#md-caption").value = "";
-    loadMedia(); loadDash();
-  } catch (e) {
-    toast("Upload fail: " + (e && e.message));
+  const url = $("#md-url").value.trim();
+  if (!url) { toast("Media link (URL) paste karein — file upload use nahi hoti"); return; }
+  if (!/^https?:\/\//i.test(url) && !url.startsWith("assets/")) {
+    toast("Valid link chahiye: https://… ya assets/…");
+    return;
   }
+  await Store.save("gallery", uid("g"), { type, url, caption, date: today() });
+  toast("🔗 Media link save ho gaya");
+  $("#md-url").value = ""; $("#md-caption").value = "";
+  loadMedia(); loadDash();
 });
 
 /* =================== DELETE / EDIT delegation =================== */

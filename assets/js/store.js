@@ -22,21 +22,19 @@ function saveLocal(data) {
 async function initFirebase() {
   if (fb) return fb;
   try {
-    const [appM, fsM, authM, stM] = await Promise.all([
+    // NOTE: Firebase Storage intentionally NOT used — media is link-only (images/video/audio URLs).
+    const [appM, fsM, authM] = await Promise.all([
       import("https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js"),
       import("https://www.gstatic.com/firebasejs/13.4.0/firebase-firestore.js"),
-      import("https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js"),
-      import("https://www.gstatic.com/firebasejs/13.4.0/firebase-storage.js")
+      import("https://www.gstatic.com/firebasejs/13.4.0/firebase-auth.js")
     ]);
     const app = appM.initializeApp(MZ.FIREBASE_CONFIG);
     fb = {
       app,
       db: fsM.getFirestore(app),
       auth: authM.getAuth(app),
-      storage: stM.getStorage(app),
       fs: fsM,
-      authM,
-      stM
+      authM
     };
     mode = "firebase";
     return fb;
@@ -132,15 +130,6 @@ export const Store = {
 
   isOwner(user) {
     return !!(user && user.email && user.email.toLowerCase() === MZ.OWNER_EMAIL.toLowerCase());
-  },
-
-  /* ---- STORAGE upload (media) ---- */
-  async uploadFile(file, path) {
-    const f = await initFirebase();
-    if (!f) throw new Error("Firebase Storage offline — file upload ke liye internet zaroori hai.");
-    const ref = f.stM.ref(f.storage, path);
-    const snap = await f.stM.uploadBytes(ref, file);
-    return await f.stM.getDownloadURL(snap.ref);
   },
 
   /* ---- Backup: full JSON export ---- */
