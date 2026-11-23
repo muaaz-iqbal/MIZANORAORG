@@ -1,0 +1,24 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Dependencies / builds
+node_modules/
+dist/
+build/
+_site/
+.next/
+out/
+.cache/
+
+# Logs & env
+*.log
+.env
+.env.*
+!.env.example
