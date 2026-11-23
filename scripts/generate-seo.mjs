@@ -15,7 +15,14 @@ import { dirname, join } from "node:path";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dataSrc = readFileSync(join(root, "assets/js/data.js"), "utf8");
 
-const SITE = (dataSrc.match(/SITE_URL:\s*"([^"]+)"/) || [, "https://muaaz-iqbal.github.io/MIZANORAORG"])[1].replace(/\/$/, "");
+/* Host-aware: every Search Console property only accepts sitemaps whose <loc>
+   URLs live under that same prefix. So each deploy target generates its own:
+     node scripts/generate-seo.mjs --site=https://mizanoraorg.web.app
+   Default (and what gets committed) = canonical SITE_URL from data.js.        */
+const argSite = (process.argv.find((a) => a.startsWith("--site=")) || "").split("=")[1];
+const SITE = (argSite || process.env.SITE_URL ||
+  (dataSrc.match(/SITE_URL:\s*"([^"]+)"/) || [, "https://muaaz-iqbal.github.io/MIZANORAORG"])[1]
+).replace(/\/$/, "");
 const SITE_NAME = (dataSrc.match(/SITE_NAME:\s*"([^"]+)"/) || [, "Mizanora Platform"])[1];
 const OWNER = (dataSrc.match(/OWNER_NAME:\s*"([^"]+)"/) || [, "Muaaz Iqbal"])[1];
 const today = new Date().toISOString().slice(0, 10);
@@ -112,7 +119,33 @@ ${rssItems}
 </rss>
 `;
 
+/* ---------- robots.txt (host-aware sitemap line) ---------- */
+const robots = `# Mizanora Platform — robots.txt
+# ${SITE}/
+
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+# AI / LLM crawlers welcome (llms.txt dekhein)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: ${SITE}/sitemap.xml
+`;
+
 writeFileSync(join(root, "sitemap.xml"), sitemap);
 writeFileSync(join(root, "rss.xml"), rss);
-console.log(`✅ sitemap.xml — ${pages.length} pages + ${blogs.length} articles`);
+writeFileSync(join(root, "robots.txt"), robots);
+console.log(`✅ sitemap.xml — ${pages.length} pages + ${blogs.length} articles  →  ${SITE}`);
 console.log(`✅ rss.xml      — ${Math.min(blogs.length, 20)} items`);
+console.log(`✅ robots.txt   — Sitemap: ${SITE}/sitemap.xml`);

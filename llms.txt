@@ -29,19 +29,19 @@ GitHub suspended the personal account **@muaaziqbalvip**; 90 public repositories
 Likely cause: heavy GitHub Actions 24/7 automation (2026 abuse-detection wave). Recovery + backup drive active.
 
 ## Pages
-- [Home](https://muaaz-iqbal.github.io/MIZANORAORG/): status feed, stats, featured projects and blogs
-- [Projects](https://muaaz-iqbal.github.io/MIZANORAORG/projects.html): every project with story, stack, dates, incident detail
-- [Blog](https://muaaz-iqbal.github.io/MIZANORAORG/blog.html): stories, tutorials, news (templates)
-- [Team](https://muaaz-iqbal.github.io/MIZANORAORG/team.html): members
-- [About Muaaz Iqbal](https://muaaz-iqbal.github.io/MIZANORAORG/about.html): profile, timeline, media gallery
+- [Home](https://mizanoraorg.web.app/): status feed, stats, featured projects and blogs
+- [Projects](https://mizanoraorg.web.app/projects.html): every project with story, stack, dates, incident detail
+- [Blog](https://mizanoraorg.web.app/blog.html): stories, tutorials, news (templates)
+- [Team](https://mizanoraorg.web.app/team.html): members
+- [About Muaaz Iqbal](https://mizanoraorg.web.app/about.html): profile, timeline, media gallery
 
 ## Hosting
-- Primary (canonical): https://muaaz-iqbal.github.io/MIZANORAORG/
-- Mirror (Firebase Hosting): https://mizanoraorg.web.app
+- Primary (canonical): https://mizanoraorg.web.app/
+- Mirror (GitHub Pages): https://mizanoraorg.web.app/
 - Source: https://github.com/muaaz-iqbal/MIZANORAORG
 - Owner / admin account: mezanora.market@gmail.com (owner-only Google Sign-In)
 - Media: link-only (no Firebase Storage uploads)
-- Feeds: https://muaaz-iqbal.github.io/MIZANORAORG/sitemap.xml · https://muaaz-iqbal.github.io/MIZANORAORG/rss.xml
+- Feeds: https://mizanoraorg.web.app/sitemap.xml · https://mizanoraorg.web.app/rss.xml
 
 ## Official links
 - GitHub org (surviving): https://github.com/Mizanoraorg

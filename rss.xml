@@ -3,77 +3,77 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mizanora Platform — Blog</title>
-    <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html</link>
-    <atom:link href="https://muaaz-iqbal.github.io/MIZANORAORG/rss.xml" rel="self" type="application/rss+xml"/>
+    <link>https://mizanoraorg.web.app/blog.html</link>
+    <atom:link href="https://mizanoraorg.web.app/rss.xml" rel="self" type="application/rss+xml"/>
     <description>Mizanora Platform — Muaaz Iqbal ke projects, blogs aur updates.</description>
     <language>en-pk</language>
-    <lastBuildDate>Mon, 23 Nov 2026 11:27:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 17:35:22 GMT</lastBuildDate>
     <item>
       <title>Kya Hua: GitHub Account Suspension — Poori Kahani</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=github-suspension-incident-2026</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=github-suspension-incident-2026</link>
       <guid isPermaLink="false">github-suspension-incident-2026</guid>
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>2–3 saal ki mehnat, 90 repos — ek hi jhatke me 404. Kya hua, kyun hua, aur ab kya kar rahe hain.</description>
     </item>
     <item>
       <title>Har Project Ka Backup: Zaroori Guide</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=backup-guide-2026</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=backup-guide-2026</link>
       <guid isPermaLink="false">backup-guide-2026</guid>
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>Ek account suspend — saari mehnat gayab. Aisa na ho, isliye ye backup routine apnayein.</description>
     </item>
     <item>
       <title>Platform v2 Live: Naya Mark, 10 Blogs, Dual Hosting</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=platform-v2-live</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=platform-v2-live</link>
       <guid isPermaLink="false">platform-v2-live</guid>
       <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
       <description>Mizanora Platform ka bara upgrade — official gold mark, generated covers, 5 naye blogs, auto sitemap aur Firebase Hosting + GitHub Pages dono par live.</description>
     </item>
     <item>
       <title>Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=firebase-hosting-dual-deploy</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=firebase-hosting-dual-deploy</link>
       <guid isPermaLink="false">firebase-hosting-dual-deploy</guid>
       <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
       <description>Ek hi static codebase ko GitHub Pages aur Firebase Hosting dono par deploy karna — bilkul free, bina VPS, bina bill ka darr.</description>
     </item>
     <item>
       <title>Noor AI: Urdu-First Assistant Kaise Sochta Hai</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=noor-ai-urdu-first-assistant</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=noor-ai-urdu-first-assistant</link>
       <guid isPermaLink="false">noor-ai-urdu-first-assistant</guid>
       <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
       <description>&apos;Sasta laal joota under 2k&apos; — aisa messy Urdu sentence samajhna, keyword search se nahi hota. Noor AI ke design ke teen asool.</description>
     </item>
     <item>
       <title>Mizanora Ecosystem: Her Project Ka Naqsha</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=mizanora-ecosystem-map</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=mizanora-ecosystem-map</link>
       <guid isPermaLink="false">mizanora-ecosystem-map</guid>
       <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
       <description>Mizanora kya hai? Store, language, TV, AI, trading, Islamic tools — poora naqsha ek jagah.</description>
     </item>
     <item>
       <title>IPTV Reseller Suite v6.1.2 — Owner Se Client Tak Ka Safar</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=iptv-reseller-suite-v6</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=iptv-reseller-suite-v6</link>
       <guid isPermaLink="false">iptv-reseller-suite-v6</guid>
       <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
       <description>3-level economy: owner control → reseller workspace → client service. 183+ integration tests, signed playback, MAG/Stalker support.</description>
     </item>
     <item>
       <title>Naye Developers Ke Liye 5 Sabaq — Saste Phone Se Shuru</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=naye-developers-ke-liye-5-sabaq</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=naye-developers-ke-liye-5-sabaq</link>
       <guid isPermaLink="false">naye-developers-ke-liye-5-sabaq</guid>
       <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
       <description>Na laptop, na bootcamp, na English perfection — sirf ek sasta phone aur zabardast zid. Wo 5 sabaq jo 90 repos banane ke baad samajh aaye.</description>
     </item>
     <item>
       <title>Muaaz Iqbal: Kasur Se Mizanora Tak</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=founder-story-muaaz-iqbal</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=founder-story-muaaz-iqbal</link>
       <guid isPermaLink="false">founder-story-muaaz-iqbal</guid>
       <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
       <description>2009 me paida hone wale ek larkay ne saste phone par duniya bhar ke platforms banaye. &apos;Unchi soch. Chhote qadam.&apos;</description>
     </item>
     <item>
       <title>Asaan Lang: Soch Urdu Mein, Code Roman-Urdu Mein</title>
-      <link>https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=asaan-lang-intro</link>
+      <link>https://mizanoraorg.web.app/blog.html?slug=asaan-lang-intro</link>
       <guid isPermaLink="false">asaan-lang-intro</guid>
       <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
       <description>Pakistan ki apni programming language — 30 second me samjhein, phir khud likhein.</description>
