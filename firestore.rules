@@ -1,0 +1,40 @@
+rules_version = '2';
+// MIZANORA PLATFORM — Firestore security rules
+// Deploy: firebase deploy --only firestore:rules
+// Public READ + sirf OWNER (muaaziqbal.vip@gmail.com) WRITE.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isOwner() {
+      return request.auth != null
+        && request.auth.token.email != null
+        && request.auth.token.email.toLowerCase() == 'muaaziqbal.vip@gmail.com';
+    }
+
+    match /status/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isOwner();
+    }
+    match /blogs/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isOwner();
+    }
+    match /projects/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isOwner();
+    }
+    match /team/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isOwner();
+    }
+    match /timeline/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isOwner();
+    }
+    match /gallery/{docId} {
+      allow read: if true;
+      allow create, update, delete: if isOwner();
+    }
+  }
+}

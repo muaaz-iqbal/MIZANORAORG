@@ -1,0 +1,21 @@
+# Mizanora Platform — robots.txt
+# https://muaaz-iqbal.github.io/MIZANORAORG/
+
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+# AI / LLM crawlers welcome (llms.txt dekhein)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://muaaz-iqbal.github.io/MIZANORAORG/sitemap.xml

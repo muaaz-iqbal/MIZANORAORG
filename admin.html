@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — Mizanora Platform</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="admin">
+  <div class="aurora"></div>
+  <div class="grid-overlay"></div>
+  <header class="site-header" id="site-header"></header>
+
+  <!-- LOGIN -->
+  <div class="login-hero" id="login-view">
+    <div class="container">
+      <div class="icon-big">🔐</div>
+      <h1 style="font-size:2.1rem;margin-bottom:10px">Mizanora Admin Panel</h1>
+      <p style="color:var(--muted);max-width:520px;margin:0 auto 28px">
+        Sirf owner (<b>muaaziqbal.vip@gmail.com</b>) Google account se login kar sakta hai.
+        Blogs, projects, status, team, media — sab kuch yahan se manage hoga.
+      </p>
+      <button class="btn btn-gold" id="login-btn">🔵 Google se Sign In</button>
+      <p style="color:var(--muted);margin-top:22px;font-size:0.88rem">
+        Firebase project: <b>mizanoraorg</b> · Mode: <b id="login-mode">…</b>
+      </p>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="container" id="admin-view" style="display:none">
+    <div class="admin-shell">
+      <aside class="admin-side" id="admin-nav">
+        <button data-tab="dash" class="active">📊 Dashboard</button>
+        <button data-tab="status">📌 Status Feed</button>
+        <button data-tab="blogs">✍️ Blogs</button>
+        <button data-tab="projects">🚀 Projects</button>
+        <button data-tab="team">🤝 Team</button>
+        <button data-tab="media">🖼️ Media Gallery</button>
+        <button data-tab="backup">💾 Backup</button>
+        <button data-tab="sitemap">🗺️ Sitemap & SEO</button>
+      </aside>
+
+      <main>
+        <!-- DASHBOARD -->
+        <section class="admin-panel active" id="tab-dash">
+          <h2>Assalam-o-Alaikum, Muaaz 👋</h2>
+          <p class="sub">Signed in as <b id="owner-email"></b> · Firebase project: <b>mizanoraorg</b> · Mode: <b id="store-mode">…</b></p>
+          <div class="grid grid-4" id="dash-stats"></div>
+          <div class="card" style="margin-top:22px">
+            <h3>⚡ Quick Actions</h3>
+            <div class="hero-actions" style="justify-content:flex-start;margin-top:14px">
+              <button class="btn btn-gold btn-sm" onclick="MZAdmin.tab('blogs');MZAdmin.newBlog()">✍️ Naya Blog</button>
+              <button class="btn btn-ghost btn-sm" onclick="MZAdmin.tab('status')">📌 Status Update</button>
+              <button class="btn btn-ghost btn-sm" onclick="MZAdmin.tab('projects')">🚀 Project Add</button>
+              <button class="btn btn-ghost btn-sm" onclick="MZAdmin.tab('sitemap')">🗺️ Sitemap Generate</button>
+              <button class="btn btn-danger btn-sm" id="logout-btn">🚪 Sign Out</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- STATUS -->
+        <section class="admin-panel" id="tab-status">
+          <h2>Status Feed</h2>
+          <p class="sub">Home page par live updates dikhte hain — kya bana rahe hain, kya hua.</p>
+          <div class="card">
+            <div class="form-grid">
+              <div><label class="field">Date</label><input type="date" id="st-date"></div>
+              <div><label class="field">Tag</label>
+                <select id="st-tag"><option>update</option><option>build</option><option>release</option><option>incident</option><option>note</option></select>
+              </div>
+              <div class="full"><label class="field">Text (Roman Urdu / English)</label><textarea id="st-text" style="min-height:90px"></textarea></div>
+            </div>
+            <button class="btn btn-gold btn-sm" style="margin-top:14px" id="st-save">💾 Save Status</button>
+          </div>
+          <div id="st-list" style="margin-top:22px"></div>
+        </section>
+
+        <!-- BLOGS -->
+        <section class="admin-panel" id="tab-blogs">
+          <h2>Blogs — templates ke saath</h2>
+          <p class="sub">Template choose karein: <b>update</b> (project update) · <b>tutorial</b> (guide + code) · <b>story</b> (kahani) · <b>news</b> (announcement). Content me markdown chalta hai: ## heading, **bold**, `code`, ```blocks```, - lists, tables.</p>
+          <div class="card">
+            <div class="form-grid">
+              <div><label class="field">Template</label>
+                <select id="bl-template"><option>update</option><option>tutorial</option><option>story</option><option>news</option></select>
+              </div>
+              <div><label class="field">Category</label><input type="text" id="bl-category" placeholder="Incident / Guide / Founder / Ecosystem"></div>
+              <div><label class="field">Title</label><input type="text" id="bl-title" placeholder="Blog ka unwan"></div>
+              <div><label class="field">Slug (URL)</label><input type="text" id="bl-slug" placeholder="mera-blog-slug"></div>
+              <div><label class="field">Date</label><input type="date" id="bl-date"></div>
+              <div><label class="field">Author</label><input type="text" id="bl-author" value="Mizanora Team"></div>
+              <div class="full"><label class="field">Cover Image URL (media gallery se copy karein)</label><input type="url" id="bl-cover" placeholder="https://..."></div>
+              <div class="full"><label class="field">Excerpt (1 line)</label><input type="text" id="bl-excerpt"></div>
+              <div class="full"><label class="field">Tags (comma separated)</label><input type="text" id="bl-tags" placeholder="Mizanora, backup, news"></div>
+              <div class="full"><label class="field">Content (markdown-lite)</label><textarea class="tall" id="bl-content" placeholder="## Shuruaat&#10;Yahan likhein..."></textarea></div>
+            </div>
+            <button class="btn btn-gold btn-sm" style="margin-top:14px" id="bl-save">💾 Blog Save</button>
+            <input type="hidden" id="bl-id">
+          </div>
+          <div id="bl-list" style="margin-top:22px"></div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="admin-panel" id="tab-projects">
+          <h2>Projects — active, past, affected</h2>
+          <p class="sub">Her project ki poori detail — kya hai, kaise bana, dates, incident (kya hadsa hua), links.</p>
+          <div class="card">
+            <div class="form-grid">
+              <div><label class="field">Name</label><input type="text" id="pj-name"></div>
+              <div><label class="field">Slug</label><input type="text" id="pj-slug" placeholder="project-slug"></div>
+              <div><label class="field">Icon (emoji)</label><input type="text" id="pj-icon" value="🚀"></div>
+              <div><label class="field">Category</label><input type="text" id="pj-category" placeholder="Streaming / AI / Commerce..."></div>
+              <div><label class="field">Status</label>
+                <select id="pj-status"><option>active</option><option>past</option><option>affected</option></select>
+              </div>
+              <div><label class="field">Stack (comma separated)</label><input type="text" id="pj-stack" placeholder="React, Firebase, Kotlin"></div>
+              <div><label class="field">Started</label><input type="text" id="pj-started" placeholder="2026"></div>
+              <div><label class="field">Last Updated</label><input type="text" id="pj-updated" placeholder="2026-11"></div>
+              <div class="full"><label class="field">Tagline</label><input type="text" id="pj-tagline"></div>
+              <div class="full"><label class="field">Story / Overview (markdown)</label><textarea id="pj-story"></textarea></div>
+              <div class="full"><label class="field">Kaise kaam karta hai</label><textarea id="pj-how"></textarea></div>
+              <div class="full"><label class="field">⚠️ Kya hadsa hua (incident)</label><textarea id="pj-incident" style="min-height:90px" placeholder="— agar kuch nahi hua"></textarea></div>
+              <div class="full"><label class="field">Links (JSON: [{"label":"Site","url":"https://..."}])</label><input type="text" id="pj-links"></div>
+              <div class="full"><label class="field">Metrics (numbers line)</label><input type="text" id="pj-metrics"></div>
+            </div>
+            <button class="btn btn-gold btn-sm" style="margin-top:14px" id="pj-save">💾 Project Save</button>
+            <input type="hidden" id="pj-id">
+          </div>
+          <div id="pj-list" style="margin-top:22px"></div>
+        </section>
+
+        <!-- TEAM -->
+        <section class="admin-panel" id="tab-team">
+          <h2>Team & Members</h2>
+          <p class="sub">Members add karein — naam, role, bio, links, contact.</p>
+          <div class="card">
+            <div class="form-grid">
+              <div><label class="field">Name</label><input type="text" id="tm-name"></div>
+              <div><label class="field">Role</label><input type="text" id="tm-role" placeholder="Developer / Community / Reseller"></div>
+              <div class="full"><label class="field">Bio</label><textarea id="tm-bio" style="min-height:90px"></textarea></div>
+              <div><label class="field">Email</label><input type="email" id="tm-email"></div>
+              <div><label class="field">Phone / WhatsApp</label><input type="text" id="tm-phone"></div>
+              <div class="full"><label class="field">Links (JSON: {"github":"https://...","youtube":"..."})</label><input type="text" id="tm-links"></div>
+            </div>
+            <button class="btn btn-gold btn-sm" style="margin-top:14px" id="tm-save">💾 Member Save</button>
+            <input type="hidden" id="tm-id">
+          </div>
+          <div id="tm-list" style="margin-top:22px"></div>
+        </section>
+
+        <!-- MEDIA -->
+        <section class="admin-panel" id="tab-media">
+          <h2>Media Gallery — images, videos, audio</h2>
+          <p class="sub">File upload Firebase Storage me jati hai (internet zaroori). Ya direct URL paste karein. Blog covers aur about page gallery yahan se control hoti hai.</p>
+          <div class="card">
+            <div class="form-grid">
+              <div><label class="field">Type</label>
+                <select id="md-type"><option>image</option><option>video</option><option>audio</option></select>
+              </div>
+              <div><label class="field">Ya direct URL</label><input type="url" id="md-url" placeholder="https://... (agar file nahi to)"></div>
+              <div class="full"><label class="field">File (Firebase Storage upload)</label><input type="file" id="md-file" accept="image/*,video/*,audio/*"></div>
+              <div class="full"><label class="field">Caption</label><input type="text" id="md-caption" placeholder="Muaaz Iqbal — Founder"></div>
+            </div>
+            <button class="btn btn-gold btn-sm" style="margin-top:14px" id="md-save">⬆️ Upload / Save</button>
+          </div>
+          <div class="gallery-grid" id="md-list" style="margin-top:22px"></div>
+        </section>
+
+        <!-- BACKUP -->
+        <section class="admin-panel" id="tab-backup">
+          <h2>💾 Backup & Restore</h2>
+          <p class="sub">Rule: ek jagah kabhi backup nahi! Ye JSON export Google Drive par rakhein. Git repos ka mirror GitLab/Codeberg par banayein.</p>
+          <div class="card">
+            <h3>Export — saara data ek JSON me</h3>
+            <p style="color:var(--muted);margin:8px 0 14px">Status + blogs + projects + team + timeline + gallery — sab export.</p>
+            <button class="btn btn-gold btn-sm" id="bk-export">⬇️ Export JSON</button>
+          </div>
+          <div class="card" style="margin-top:18px">
+            <h3>Import — pehle wala backup wapas</h3>
+            <p style="color:var(--muted);margin:8px 0 14px">JSON file select karein — data restore ho jayega.</p>
+            <input type="file" id="bk-file" accept="application/json">
+            <button class="btn btn-ghost btn-sm" style="margin-top:12px" id="bk-import">⬆️ Import JSON</button>
+          </div>
+          <div class="card" style="margin-top:18px">
+            <h3>Git Backup Routine (manual / CI)</h3>
+            <pre style="background:#0b1512;border:1px solid var(--border);border-radius:12px;padding:16px;overflow-x:auto;font-size:0.85rem;color:var(--emerald2)"># Har repo ka mirror doosre platform par
+git clone --mirror https://github.com/Mizanoraorg/repo.git
+cd repo.git
+git push --mirror https://gitlab.com/you/repo.git
+
+# Weekly bundle (local + Drive)
+git bundle create repo-weekly.bundle --all</pre>
+          </div>
+        </section>
+
+        <!-- SITEMAP -->
+        <section class="admin-panel" id="tab-sitemap">
+          <h2>🗺️ Auto Sitemap & Fast Indexing</h2>
+          <p class="sub">Sitemap generate karein → <b>sitemap.xml</b> file me paste karke repo me commit karein → Google Search Console me submit karein.</p>
+          <div class="card">
+            <button class="btn btn-gold btn-sm" id="sm-generate">⚡ Sitemap Generate</button>
+            <button class="btn btn-ghost btn-sm" id="sm-download">⬇️ Download sitemap.xml</button>
+            <button class="btn btn-ghost btn-sm" id="sm-copy">📋 Copy XML</button>
+            <textarea class="tall" id="sm-out" style="margin-top:16px" placeholder="Generate button dabayein..."></textarea>
+          </div>
+          <div class="card" style="margin-top:18px">
+            <h3>🚀 Fast Google Indexing Checklist</h3>
+            <ol style="color:var(--muted);margin:12px 0 0 22px">
+              <li>Google Search Console me property verify karein (domain ya URL-prefix)</li>
+              <li><b>Sitemaps</b> me <code>sitemap.xml</code> submit karein</li>
+              <li>URL Inspection → har important page par <b>Request Indexing</b></li>
+              <li>Social share (X, Facebook, WhatsApp) — backlinks jaldi index karate hain</li>
+              <li><code>llms.txt</code> + JSON-LD se AI search (ChatGPT, Gemini, Perplexity) me bhi record</li>
+              <li>Har naye blog par: sitemap regen → commit → Search Console request</li>
+            </ol>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <div class="toast" id="toast"></div>
+  <script src="assets/js/data.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>

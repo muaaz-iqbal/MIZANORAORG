@@ -1,378 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mizanora Org — Muaaz Iqbal · Full-Stack &amp; Android Developer</title>
-<meta name="description" content="Mizanora Org — the engineering home of Muaaz Iqbal. Full-stack web platforms, Android apps, compiler tooling and live-streaming pipelines." />
-<meta name="theme-color" content="#05060f" />
-<meta property="og:title" content="Mizanora Org — Muaaz Iqbal" />
-<meta property="og:description" content="Full-stack web platforms, Android apps, compiler tooling and live-streaming pipelines." />
-<meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230a0f2b'/%3E%3Ctext x='32' y='44' font-size='34' font-family='monospace' font-weight='700' text-anchor='middle' fill='%2322d3ee'%3EM%3C/text%3E%3C/svg%3E" />
-<style>
-  *,*::before,*::after{box-sizing:border-box}
-  :root{
-    --bg:#05060f;
-    --ink:#e6edf7;
-    --muted:#93a3bd;
-    --cyan:#22d3ee;
-    --violet:#a78bfa;
-    --pink:#fb7185;
-    --mint:#4ade80;
-    --card:rgba(255,255,255,.045);
-    --line:rgba(148,163,184,.18);
-    --max:1120px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mizanora Platform — Muaaz Iqbal | Projects, Blogs, Status & Team (Official)</title>
+  <meta name="description" content="Official Mizanora Platform by Muaaz Iqbal (Kasur, Punjab, Pakistan) — saara record ek jagah: Mizanora status updates, blogs, all projects (active + past), team, media gallery, timeline aur GitHub suspension incident ki poori detail. Fast-indexing SEO ready.">
+  <meta name="keywords" content="Muaaz Iqbal, Muaaz Iqbal Mizanora, Mizanora, Mizanora Org, Muaaz Iqbal Kasur, Asaan Lang, BarakatWave TV, SIRAVEX, MI Trade Master, Noor AI, GitHub suspension, Pakistan developer">
+  <meta name="author" content="Muaaz Iqbal">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://muaaz-iqbal.github.io/MIZANORAORG/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mizanora Platform">
+  <meta property="og:title" content="Mizanora Platform — Muaaz Iqbal | Official">
+  <meta property="og:description" content="Mizanora status, blogs, projects, team, media — Muaaz Iqbal ki poori digital dastavez. Her project ka record: kya bana, kis date, kya hadsa hua.">
+  <meta property="og:url" content="https://muaaz-iqbal.github.io/MIZANORAORG/">
+  <meta property="og:locale" content="en_US">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mizanora Platform — Muaaz Iqbal">
+  <meta name="twitter:description" content="Official record: Mizanora projects, blogs, status, team & GitHub suspension incident.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://muaaz-iqbal.github.io/MIZANORAORG/#website",
+        "name": "Mizanora Platform",
+        "url": "https://muaaz-iqbal.github.io/MIZANORAORG/",
+        "description": "Official Mizanora Platform — projects, blogs, status, team and media by Muaaz Iqbal",
+        "inLanguage": "en-PK"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://muaaz-iqbal.github.io/MIZANORAORG/about.html#person",
+        "name": "Muaaz Iqbal",
+        "alternateName": ["Muaaz Iqbal Mizanora", "Muaaz Iqbal Kasur", "Muaz Iqbal"],
+        "jobTitle": "Founder & Lead Developer, Mizanora",
+        "birthDate": "2009-11-27",
+        "email": "mailto:muaaziqbal.vip@gmail.com",
+        "telephone": "+92-306-2015326",
+        "address": { "@type": "PostalAddress", "addressLocality": "Kasur", "addressRegion": "Punjab", "addressCountry": "PK" },
+        "alumniOf": "Islamia Graduate College",
+        "knowsAbout": ["Next.js", "React", "Python", "Kotlin", "Artificial Intelligence", "E-commerce", "Streaming", "Programming Languages"],
+        "sameAs": [
+          "https://github.com/muaaziqbalvip",
+          "https://mizanora.vercel.app",
+          "https://barakatwave.vercel.app",
+          "https://asaan-lang.vercel.app",
+          "https://youtube.com/@MuaazIqbalofficial",
+          "https://x.com/MizanoraApps",
+          "https://instagram.com/mizanora"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://muaaz-iqbal.github.io/MIZANORAORG/#org",
+        "name": "Mizanora",
+        "alternateName": ["Mizanora Org", "Mizanora Projects"],
+        "founder": { "@id": "https://muaaz-iqbal.github.io/MIZANORAORG/about.html#person" },
+        "slogan": "Unchi soch. Chhote qadam.",
+        "description": "Pakistan-based digital infrastructure, halal e-commerce and ethical AI systems — rooted in Mizan (balance) and Noor (illumination)."
+      }
+    ]
   }
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;background:var(--bg);color:var(--ink);
-    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
-    -webkit-font-smoothing:antialiased;overflow-x:hidden;
-    line-height:1.65;
-  }
-  a{color:inherit;text-decoration:none}
-  ::selection{background:rgba(34,211,238,.32);color:#fff}
-
-  /* ---------- background ---------- */
-  #stars{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-  .aurora{position:fixed;inset:-20% -10%;z-index:0;pointer-events:none;filter:blur(70px);opacity:.75}
-  .aurora span{position:absolute;border-radius:50%;mix-blend-mode:screen;animation:drift 22s ease-in-out infinite alternate}
-  .aurora .a1{width:52vw;height:52vw;left:-8vw;top:-6vw;background:radial-gradient(circle,rgba(34,211,238,.42),transparent 65%)}
-  .aurora .a2{width:46vw;height:46vw;right:-6vw;top:8vh;background:radial-gradient(circle,rgba(167,139,250,.42),transparent 65%);animation-delay:-7s}
-  .aurora .a3{width:44vw;height:44vw;left:22vw;bottom:-16vw;background:radial-gradient(circle,rgba(251,113,133,.30),transparent 65%);animation-delay:-13s}
-  @keyframes drift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(4vw,3vh,0) scale(1.12)}100%{transform:translate3d(-3vw,-2vh,0) scale(.96)}}
-
-  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.035;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
-
-  main,footer,header{position:relative;z-index:2}
-  .wrap{width:min(100% - 44px,var(--max));margin-inline:auto}
-
-  /* ---------- glow cursor ---------- */
-  .spot{position:fixed;width:520px;height:520px;left:0;top:0;border-radius:50%;pointer-events:none;z-index:1;
-    background:radial-gradient(circle,rgba(124,232,255,.13),transparent 62%);
-    transform:translate(-50%,-50%);transition:opacity .4s;opacity:0}
-
-  /* ---------- nav ---------- */
-  header{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);
-    background:linear-gradient(180deg,rgba(5,6,15,.86),rgba(5,6,15,.35));
-    border-bottom:1px solid rgba(148,163,184,.12)}
-  nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
-  .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.16em;font-size:14px}
-  .logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-family:ui-monospace,monospace;
-    background:linear-gradient(135deg,rgba(34,211,238,.22),rgba(167,139,250,.22));
-    border:1px solid rgba(34,211,238,.4);color:#c7f9ff;box-shadow:0 0 22px rgba(34,211,238,.28)}
-  .navlinks{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-  .navlinks a{font-size:13.5px;color:var(--muted);padding:8px 12px;border-radius:9px;transition:.25s}
-  .navlinks a:hover{color:#fff;background:rgba(255,255,255,.06)}
-  .pill{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
-    padding:8px 14px;border-radius:999px;border:1px solid rgba(74,222,128,.35);color:#bbf7d0;
-    background:rgba(74,222,128,.08)}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 10px var(--mint);animation:pulse 1.9s infinite}
-  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
-
-  /* ---------- hero ---------- */
-  .hero{padding:clamp(46px,8vw,96px) 0 clamp(30px,5vw,56px);text-align:center}
-  .eyebrow{display:inline-flex;gap:10px;align-items:center;font-family:ui-monospace,monospace;font-size:12.5px;
-    letter-spacing:.24em;text-transform:uppercase;color:#9fb3d1;border:1px solid var(--line);
-    padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.03);margin-bottom:26px}
-  h1{font-size:clamp(2.5rem,7.4vw,5.1rem);line-height:1.03;margin:0 0 8px;font-weight:800;letter-spacing:-.02em}
-  .grad{background:linear-gradient(100deg,#22d3ee,#818cf8 38%,#c084fc 62%,#fb7185);
-    background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
-    animation:slide 9s ease-in-out infinite}
-  @keyframes slide{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-  .roles{font-family:ui-monospace,monospace;font-size:clamp(.95rem,2.4vw,1.22rem);color:#a5b4fc;min-height:1.9em;margin:16px 0 6px}
-  .caret{display:inline-block;width:.62ch;height:1.05em;vertical-align:-.16em;margin-left:3px;background:#e879f9;
-    animation:blink 1.05s steps(1) infinite;border-radius:1px}
-  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
-  .lede{max-width:660px;margin:16px auto 0;color:var(--muted);font-size:clamp(.98rem,2.2vw,1.09rem)}
-  .cta{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-top:34px}
-  .btn{position:relative;display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:13px;
-    font-weight:650;font-size:14.5px;border:1px solid transparent;transition:transform .25s,box-shadow .25s,background .25s;overflow:hidden}
-  .btn:active{transform:translateY(1px) scale(.99)}
-  .btn-primary{color:#04121a;background:linear-gradient(120deg,#67e8f9,#a78bfa);
-    box-shadow:0 12px 34px -12px rgba(103,232,249,.75)}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 44px -12px rgba(167,139,250,.85)}
-  .btn-ghost{color:var(--ink);background:rgba(255,255,255,.04);border-color:var(--line)}
-  .btn-ghost:hover{transform:translateY(-2px);background:rgba(255,255,255,.08);border-color:rgba(34,211,238,.45)}
-
-  /* ---------- stats ---------- */
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:clamp(38px,6vw,64px)}
-  .stat{padding:20px 16px;border:1px solid var(--line);border-radius:16px;background:var(--card);
-    backdrop-filter:blur(8px);transition:.3s}
-  .stat:hover{border-color:rgba(34,211,238,.4);transform:translateY(-3px);box-shadow:0 20px 40px -26px rgba(34,211,238,.8)}
-  .stat b{display:block;font-size:1.62rem;letter-spacing:-.02em}
-  .stat span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8296b1}
-
-  /* ---------- sections ---------- */
-  section{padding:clamp(48px,8vw,86px) 0}
-  .kicker{font-family:ui-monospace,monospace;font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;
-    color:var(--cyan);margin:0 0 10px}
-  h2{font-size:clamp(1.7rem,4.2vw,2.6rem);margin:0 0 14px;letter-spacing:-.02em;line-height:1.15}
-  .sub{color:var(--muted);max-width:640px;margin:0 0 34px}
-
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-  .card{position:relative;padding:26px 24px;border-radius:20px;border:1px solid var(--line);
-    background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
-    overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s}
-  .card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;opacity:0;transition:opacity .35s;
-    background:linear-gradient(130deg,rgba(34,211,238,.7),rgba(167,139,250,.6),rgba(251,113,133,.55));
-    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-    -webkit-mask-composite:xor;mask-composite:exclude}
-  .card:hover{transform:translateY(-5px);box-shadow:0 30px 60px -34px rgba(129,140,248,.85)}
-  .card:hover::before{opacity:1}
-  .card .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:20px;
-    background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.28);margin-bottom:16px}
-  .card h3{margin:0 0 8px;font-size:1.16rem;letter-spacing:-.01em}
-  .card p{margin:0;color:var(--muted);font-size:.94rem}
-  .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}
-  .tag{font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.06em;padding:4px 9px;border-radius:7px;
-    color:#a7f3d0;background:rgba(74,222,128,.09);border:1px solid rgba(74,222,128,.22)}
-
-  /* marquee */
-  .marquee{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;margin-top:8px;
-    mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-  .track{display:flex;gap:38px;width:max-content;animation:scroll 26s linear infinite;align-items:center}
-  .marquee:hover .track{animation-play-state:paused}
-  @keyframes scroll{to{transform:translateX(-50%)}}
-  .chip{font-family:ui-monospace,monospace;font-size:13px;color:#b6c6de;white-space:nowrap;
-    display:inline-flex;align-items:center;gap:9px}
-  .chip i{width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,#22d3ee,#a78bfa);display:block}
-
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
-  .reveal.in{opacity:1;transform:none}
-
-  /* footer */
-  footer{border-top:1px solid var(--line);padding:34px 0 46px;color:#7f92ad;font-size:13.5px}
-  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
-  .foot a{color:#a9bcd8;transition:.2s}
-  .foot a:hover{color:#67e8f9}
-  .social{display:flex;gap:10px}
-  .social a{width:36px;height:36px;display:grid;place-items:center;border-radius:10px;border:1px solid var(--line);
-    background:rgba(255,255,255,.03);transition:.25s}
-  .social a:hover{transform:translateY(-2px);border-color:rgba(34,211,238,.5);color:#67e8f9}
-  .social svg{width:17px;height:17px;fill:currentColor}
-
-  @media (max-width:640px){
-    .navlinks a:not(.btn){display:none}
-    .spot{display:none}
-    .foot{justify-content:center;text-align:center}
-  }
-  @media (prefers-reduced-motion:reduce){
-    *{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
-    html{scroll-behavior:auto}
-    .reveal{opacity:1;transform:none}
-  }
-</style>
+  </script>
 </head>
-<body>
-<canvas id="stars" aria-hidden="true"></canvas>
-<div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
-<div class="grain" aria-hidden="true"></div>
-<div class="spot" id="spot" aria-hidden="true"></div>
+<body data-page="home">
+  <div class="aurora"></div>
+  <div class="grid-overlay"></div>
 
-<header>
-  <div class="wrap">
-    <nav>
-      <a class="brand" href="#top">
-        <span class="logo">M</span>
-        MIZANORA<span style="color:var(--cyan)">ORG</span>
-      </a>
-      <div class="navlinks">
-        <a href="#work">Work</a>
-        <a href="#stack">Stack</a>
-        <a href="#about">About</a>
-        <a class="btn btn-ghost" style="padding:9px 16px;font-size:13px" href="https://github.com/muaaz-iqbal" target="_blank" rel="noopener">GitHub ↗</a>
+  <header class="site-header" id="site-header"></header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge"><span class="pulse-dot"></span> Live record · Updated 23 November 2026</div>
+      <h1>Mizanora Platform — <span class="grad-text">Her project. Her kahani.<br>Ek jagah mehfooz.</span></h1>
+      <p class="lead">
+        <b>Muaaz Iqbal</b> (Kasur, Punjab, Pakistan) ka official digital record — status updates, blogs,
+        2–3 saal ke tamaam projects, team, media gallery, timeline, aur GitHub suspension incident ki
+        imaandar detail. Google-ready SEO, auto sitemap aur Firebase-powered admin.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="projects.html">🚀 Projects Dekhein</a>
+        <a class="btn btn-ghost" href="blog.html">✍️ Blog Parhein</a>
+        <a class="btn btn-ghost" href="about.html">👤 Muaaz Iqbal</a>
       </div>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-  <section class="hero wrap">
-    <span class="eyebrow"><span class="dot"></span> Open for collaborations</span>
-    <h1>Building software that<br><span class="grad">feels alive.</span></h1>
-    <p class="roles"><span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
-    <p class="lede">I'm <strong>Muaaz Iqbal</strong> — a full-stack &amp; Android developer from Pakistan. I craft fast web platforms, native Android apps, compiler tooling and live-streaming pipelines. This is the home of <strong>Mizanora</strong>.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#work">Explore my work <span aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="https://github.com/muaaz-iqbal" target="_blank" rel="noopener">View GitHub</a>
     </div>
+    <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
+  </section>
 
-    <div class="stats reveal">
-      <div class="stat"><b data-count="2">0</b><span>Flagship products</span></div>
-      <div class="stat"><b data-count="12" data-suffix="+">0</b><span>Technologies</span></div>
-      <div class="stat"><b data-count="100" data-suffix="%">0</b><span>Hands-on build</span></div>
-      <div class="stat"><b data-count="24" data-suffix="/7">0</b><span>Learning mode</span></div>
+  <!-- STATS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="kicker">By the numbers</div><h2>2–3 saal ki mehnat, ek nazar me</h2></div>
+        <p>30 October 2026 tak ke verified stats — 90 repos, 13.7 MB code, 800 channels. Incident se pehle ki tasveer.</p>
+      </div>
+      <div class="grid grid-3" id="home-stats"></div>
     </div>
   </section>
 
-  <section id="work" class="wrap">
-    <p class="kicker">// selected work</p>
-    <h2>Products &amp; experiments</h2>
-    <p class="sub">A few things I've designed, engineered and shipped end-to-end.</p>
-    <div class="grid">
-      <article class="card reveal">
-        <div class="ico">◈</div>
-        <h3>Mizanora</h3>
-        <p>The flagship platform — a modern, performance-first web experience with a clean product layer and a polished interface.</p>
-        <div class="tags"><span class="tag">Web Platform</span><span class="tag">UI/UX</span><span class="tag">Full-Stack</span></div>
-      </article>
-      <article class="card reveal">
-        <div class="ico">⌘</div>
-        <h3>Asaan-Lang</h3>
-        <p>A beginner-friendly programming language with its own compiler pipeline — lexer, parser and code generation built for learners.</p>
-        <div class="tags"><span class="tag">Compiler</span><span class="tag">Tooling</span><span class="tag">Education</span></div>
-      </article>
-      <article class="card reveal">
-        <div class="ico">▶</div>
-        <h3>Live-streaming pipelines</h3>
-        <p>Low-latency streaming workflows and automation glue — from capture to delivery, kept lean and reliable.</p>
-        <div class="tags"><span class="tag">Streaming</span><span class="tag">Automation</span><span class="tag">Infra</span></div>
-      </article>
-      <article class="card reveal">
-        <div class="ico">📱</div>
-        <h3>Android apps</h3>
-        <p>Native Android applications focused on smooth motion, offline-first behaviour and delightful small details.</p>
-        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Android</span><span class="tag">Material 3</span></div>
-      </article>
+  <!-- STATUS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="kicker">Status feed</div><h2>Mizanora kya kar raha hai?</h2></div>
+        <p>Live updates — releases, builds, incidents. Admin panel se update karein.</p>
+      </div>
+      <div class="feed" id="home-status"></div>
     </div>
   </section>
 
-  <section id="stack" class="wrap" style="padding-bottom:0">
-    <p class="kicker">// toolbox</p>
-    <h2>Tech I build with</h2>
-    <p class="sub">Pragmatic choices — the right tool for the job, not the trendiest one.</p>
-  </section>
-  <div class="marquee" aria-hidden="true">
-    <div class="track" id="track"></div>
-  </div>
-
-  <section id="about" class="wrap">
-    <p class="kicker">// about</p>
-    <h2>Engineer by craft, builder by instinct</h2>
-    <p class="sub">I like problems that sit at the intersection of logic and design: making a system fast, then making it feel effortless. My work lives in three lanes — products people use, tools that make building easier, and interfaces that make software feel human.</p>
-    <div class="grid">
-      <article class="card reveal"><div class="ico">⚡</div><h3>Performance first</h3><p>Lean payloads, measurable budgets, no unnecessary dependencies. Fast is a feature.</p></article>
-      <article class="card reveal"><div class="ico">🎯</div><h3>Clarity over cleverness</h3><p>Readable code, honest architecture, decisions that a future maintainer will thank you for.</p></article>
-      <article class="card reveal"><div class="ico">🧩</div><h3>End-to-end ownership</h3><p>From schema and API to the last transition curve — I ship the whole slice.</p></article>
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="kicker">Flagship work</div><h2>Projects — active, past aur affected</h2></div>
+        <a class="btn btn-ghost btn-sm" href="projects.html">Sab projects →</a>
+      </div>
+      <div class="grid grid-3" id="home-projects"></div>
     </div>
   </section>
-</main>
 
-<footer>
-  <div class="wrap foot">
-    <span>© <span id="yr">2026</span> Mizanora Org · Built by <a href="https://github.com/muaaz-iqbal" target="_blank" rel="noopener">Muaaz Iqbal</a> 🇵🇰</span>
-    <div class="social">
-      <a href="https://github.com/muaaz-iqbal" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A7.995 7.995 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-      </a>
-      <a href="https://github.com/muaaz-iqbal/asaa-lang" target="_blank" rel="noopener" aria-label="Asaan-Lang repository">
-        <svg viewBox="0 0 16 16"><path d="M4.72 3.22a.75.75 0 0 1 1.06 1.06L2.06 8l3.72 3.72a.75.75 0 1 1-1.06 1.06L.47 8.53a.75.75 0 0 1 0-1.06Zm6.56 0a.75.75 0 1 0-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 1 0 1.06 1.06l4.25-4.25a.75.75 0 0 0 0-1.06Z"/></svg>
-      </a>
+  <!-- BLOGS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="kicker">Blogs</div><h2>Kahaniyan, guides aur updates</h2></div>
+        <a class="btn btn-ghost btn-sm" href="blog.html">Sab blogs →</a>
+      </div>
+      <div class="grid grid-3" id="home-blogs"></div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<script>
-(function(){
-  "use strict";
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="card" style="padding:48px;text-align:center;background:linear-gradient(135deg, rgba(212,175,55,0.1), rgba(16,185,129,0.1))">
+        <div class="kicker">Backup + Record</div>
+        <h2 style="font-size:clamp(1.6rem,3.5vw,2.3rem);margin-bottom:12px">“Jo account par hai, wo gayab ho sakta hai.<br>Jo aapki site par hai, wo mehfooz hai.”</h2>
+        <p style="color:var(--muted);max-width:640px;margin:0 auto 26px">
+          November 2026 me GitHub account suspension ne 90 repos gayab kiye. Is platform ka maqsad hai ke
+          Mizanora ka record, media aur kahani hamesha online rahe — Google par bhi, website par bhi.
+        </p>
+        <div class="hero-actions" style="margin-top:0">
+          <a class="btn btn-gold" href="admin.html">⚙️ Admin Panel</a>
+          <a class="btn btn-ghost" href="blog.html?slug=github-suspension-incident-2026">⚠️ Incident Report</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  /* ---------- starfield ---------- */
-  var cv = document.getElementById("stars"), ctx = cv.getContext("2d"), stars = [], w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
-  function size(){
-    w = cv.clientWidth; h = cv.clientHeight;
-    cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
-    var n = Math.round((w * h) / 15000);
-    stars = [];
-    for (var i = 0; i < n; i++){
-      stars.push({ x: Math.random()*w, y: Math.random()*h, r: Math.random()*1.5+.3,
-                   a: Math.random(), s: Math.random()*.5+.12, hue: Math.random() > .78 });
-    }
-  }
-  function draw(){
-    ctx.clearRect(0,0,w,h);
-    for (var i=0;i<stars.length;i++){
-      var st = stars[i];
-      st.a += st.s * .02;
-      var tw = .35 + Math.abs(Math.sin(st.a)) * .65;
-      ctx.beginPath();
-      ctx.fillStyle = st.hue ? "rgba(167,139,250,"+tw+")" : "rgba(186,230,253,"+tw+")";
-      ctx.arc(st.x, st.y, st.r, 0, Math.PI*2); ctx.fill();
-      st.y -= st.s;
-      if (st.y < -2){ st.y = h + 2; st.x = Math.random()*w; }
-    }
-    requestAnimationFrame(draw);
-  }
-  size(); window.addEventListener("resize", size);
-  if (!reduce) draw(); else { /* static stars */ for (var k=0;k<stars.length;k++){ctx.fillStyle="rgba(186,230,253,.5)";ctx.beginPath();ctx.arc(stars[k].x,stars[k].y,stars[k].r,0,7);ctx.fill();} }
-
-  /* ---------- typewriter ---------- */
-  var roles = ["Full-Stack Developer","Android Developer","Compiler & Tooling Engineer","Live-Streaming Architect","Interface Craftsman"];
-  var out = document.getElementById("typed"), ri = 0, ci = 0, del = false;
-  function tick(){
-    var word = roles[ri];
-    ci += del ? -1 : 1;
-    out.textContent = word.slice(0, ci);
-    var wait = del ? 32 : 74;
-    if (!del && ci === word.length){ del = true; wait = 1500; }
-    else if (del && ci === 0){ del = false; ri = (ri+1) % roles.length; wait = 340; }
-    setTimeout(tick, wait);
-  }
-  if (reduce) out.textContent = roles[0]; else tick();
-
-  /* ---------- marquee ---------- */
-  var stack = ["JavaScript","TypeScript","Node.js","React","Next.js","Kotlin","Java","Android SDK","Python","C++","HTML/CSS","Tailwind","Firebase","MongoDB","Git","Linux","FFmpeg","REST APIs","Compiler Design","Material 3"];
-  var track = document.getElementById("track");
-  var html = stack.map(function(s){ return '<span class="chip"><i></i>'+s+'</span>'; }).join("");
-  track.innerHTML = html + html;
-
-  /* ---------- counters ---------- */
-  var counted = false;
-  function runCounters(){
-    if (counted) return; counted = true;
-    document.querySelectorAll("[data-count]").forEach(function(el){
-      var target = parseInt(el.getAttribute("data-count"),10), suffix = el.getAttribute("data-suffix") || "";
-      if (reduce){ el.textContent = target + suffix; return; }
-      var t0 = performance.now(), dur = 1400;
-      (function step(now){
-        var p = Math.min((now - t0)/dur, 1), e = 1 - Math.pow(1-p, 3);
-        el.textContent = Math.round(target*e) + suffix;
-        if (p < 1) requestAnimationFrame(step);
-      })(t0);
-    });
-  }
-
-  /* ---------- reveal ---------- */
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(en){
-      if (en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
-    });
-  }, { threshold: .16, rootMargin: "0px 0px -40px" });
-  document.querySelectorAll(".reveal").forEach(function(el, i){
-    el.style.transitionDelay = (Math.min(i,6) * 70) + "ms";
-    io.observe(el);
-  });
-  setTimeout(runCounters, 500);
-
-  /* ---------- cursor spotlight ---------- */
-  var spot = document.getElementById("spot"), tx = -999, ty = -999, cx = -999, cy = -999;
-  if (!reduce && window.matchMedia("(pointer:fine)").matches){
-    window.addEventListener("pointermove", function(e){
-      tx = e.clientX; ty = e.clientY; spot.style.opacity = 1;
-    });
-    (function follow(){
-      cx += (tx-cx)*.12; cy += (ty-cy)*.12;
-      spot.style.transform = "translate("+(cx - 260)+"px,"+(cy - 260)+"px)";
-      requestAnimationFrame(follow);
-    })();
-  }
-
-  document.getElementById("yr").textContent = new Date().getFullYear();
-})();
-</script>
+  <footer class="site-footer" id="site-footer"></footer>
+  <div class="toast" id="toast"></div>
+  <div id="modal-root"></div>
+  <script src="assets/js/data.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
