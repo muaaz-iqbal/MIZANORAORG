@@ -22,3 +22,7 @@ out/
 .env
 .env.*
 !.env.example
+
+# Firebase CLI local state
+.firebase/
+firebase-debug.log*

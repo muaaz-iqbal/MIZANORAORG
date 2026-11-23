@@ -109,7 +109,7 @@ function injectChrome() {
         </div>
         <div>
           <h4>Contact</h4>
-          <a href="mailto:muaaziqbal.vip@gmail.com">muaaziqbal.vip@gmail.com</a>
+          <a href="mailto:mezanora.market@gmail.com">mezanora.market@gmail.com</a>
           <a href="https://wa.me/923062015326" target="_blank" rel="noopener">WhatsApp: +92 306 2015326</a>
           <a href="https://youtube.com/@MuaazIqbalofficial" target="_blank" rel="noopener">YouTube</a>
           <a href="https://x.com/MizanoraApps" target="_blank" rel="noopener">X / Twitter</a>

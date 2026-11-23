@@ -9,6 +9,7 @@
 <a href="https://muaaz-iqbal.github.io/MIZANORAORG/"><img src="https://img.shields.io/badge/🌐_LIVE_SITE-Open-10b981?style=for-the-badge&labelColor=05100b" alt="Live site" /></a>
 <a href="https://muaaz-iqbal.github.io/MIZANORAORG/projects.html"><img src="https://img.shields.io/badge/🚀_PROJECTS-17_builds-d4af37?style=for-the-badge&labelColor=05100b" alt="Projects" /></a>
 <a href="https://muaaz-iqbal.github.io/MIZANORAORG/blog.html"><img src="https://img.shields.io/badge/✍️_BLOG-Stories_&_guides-34d399?style=for-the-badge&labelColor=05100b" alt="Blog" /></a>
+<a href="https://mizanoraorg.web.app"><img src="https://img.shields.io/badge/🔥_FIREBASE_HOSTING-mizanoraorg.web.app-fbbf24?style=for-the-badge&logo=firebase&logoColor=white&labelColor=05100b" alt="Firebase Hosting" /></a>
 <a href="https://github.com/muaaz-iqbal"><img src="https://img.shields.io/badge/GitHub-muaaz--iqbal-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=05100b" alt="GitHub" /></a>
 
 <img src="https://img.shields.io/badge/Status-Active_✅-10b981?style=flat-square&labelColor=05100b" alt="status" />
@@ -34,7 +35,7 @@ kis date push hua, kya stack laga, aur kya hadsa pesh aaya.
 |---|---|
 | **Kya hai** | Ek self-hosted, **zero-build** static platform — status feed, projects, blogs, team, media, timeline |
 | **Kisne banaya** | Muaaz Iqbal — Founder & Lead Developer, Mizanora · born 27 Nov 2009, Kasur |
-| **Kaise chalta hai** | Plain HTML + CSS + ES-modules JavaScript · Firebase (optional) · GitHub Pages hosting |
+| **Kaise chalta hai** | Plain HTML + CSS + ES-modules JavaScript · Firebase (Auth · Firestore · Storage) · **dual hosting: GitHub Pages + Firebase Hosting** |
 | **Kyun bana** | Nov 2026 me personal GitHub account suspend hua — **90 repos 404**. Sabaq: record apni website par hona chahiye, kisi third-party account par nahi |
 | **Ab kya** | Live record + recovery drive jaari · har hafte naye status updates |
 
@@ -81,7 +82,7 @@ GitHub ki abuse policy *"Actions for general computing purposes"* ke khilaaf. 20
 | 🤝 **Team / Members** | Add & manage members — naam, role, bio, links (GitHub/YouTube/X/IG), email, WhatsApp |
 | 🖼️ **Media Gallery** | Images / video / audio — URL se ya Firebase Storage upload, captions ke saath |
 | 👤 **About + Timeline** | Personality, 9-event timeline, gallery, quotes, numbers — SEO-ready Person JSON-LD |
-| ⚙️ **Admin Panel** | Google Sign-In, **owner-only** (`muaaziqbal.vip@gmail.com`) — 8 tabs: Dashboard, Status, Blogs, Projects, Team, Media, Backup, Sitemap |
+| ⚙️ **Admin Panel** | Google Sign-In, **owner-only** (`mezanora.market@gmail.com`) — 8 tabs: Dashboard, Status, Blogs, Projects, Team, Media, Backup, Sitemap |
 | 💾 **Backup / Restore** | Full **JSON export + import** — ek click me saara content, Google Drive par rakhne ke liye |
 | 🗺️ **Auto Sitemap** | Admin se generate → `sitemap.xml` download / copy / commit |
 | 🔍 **SEO pack** | JSON-LD (`Person` · `Organization` · `WebSite`), OG + Twitter cards, canonical URLs, `robots.txt`, **`llms.txt`** (AI search) |
@@ -178,8 +179,12 @@ MIZANORAORG/
 │   └── SITE-README.md      # 📘 original project notes (Roman-Urdu)
 ├── backup/
 │   └── mizanora-platform-backup.zip  # 💾 source snapshot
+├── firebase.json           # 🔥 Hosting (public: ".") + rules + headers
+├── .firebaserc             # 🔥 project: mizanoraorg
 ├── LICENSE                 # MIT
-└── .github/workflows/deploy-pages.yml  # 🚀 auto-deploy on push to main
+└── .github/workflows/
+    ├── deploy-pages.yml    # 🐙 GitHub Pages on push to main
+    └── deploy-firebase.yml # 🔥 Firebase Hosting (live channel)
 ```
 
 ---
@@ -206,13 +211,18 @@ Phir kholo 👉 **http://localhost:8080** — bina Firebase ke bhi poori site ch
 
 <br />
 
-Config `assets/js/data.js` me already hai (project: **`mizanoraorg`**).
+Config `assets/js/data.js` me already hai (project: **`mizanoraorg`**), aur repo me
+`firebase.json` + `.firebaserc` bhi mojood hain — `firebase use` khud sahi project utha lega.
+
+**Owner / login account:** `mezanora.market@gmail.com` *(sirf yehi email admin panel me sign in kar sakti hai — `data.js` → `OWNER_EMAIL`, `firestore.rules`, `storage.rules` teeno me yahi lock hai)*
 
 1. **Firebase Console** → [console.firebase.google.com](https://console.firebase.google.com) → project `mizanoraorg`
 2. **Authentication → Sign-in method → Google** → Enable
-3. **Authentication → Settings → Authorized domains** me add karo:
-   - `muaaz-iqbal.github.io`
-   - `localhost`
+3. **Authentication → Settings → Authorized domains** me ye chaar add karo:
+   - `muaaz-iqbal.github.io`  (GitHub Pages)
+   - `mizanoraorg.web.app`  (Firebase Hosting)
+   - `mizanoraorg.firebaseapp.com`
+   - `localhost`  (local testing)
 4. **Firestore** → Create database (production mode) → `firestore.rules` deploy karo:
    ```bash
    npm i -g firebase-tools
@@ -231,7 +241,7 @@ Config `assets/js/data.js` me already hai (project: **`mizanoraorg`**).
 
 ## ⚙️ Admin panel — kya kya kar sakte ho
 
-Owner-only (`muaaziqbal.vip@gmail.com`), 8 tabs:
+Owner-only (`mezanora.market@gmail.com`), 8 tabs:
 
 | Tab | Kaam |
 | --- | --- |
@@ -246,21 +256,46 @@ Owner-only (`muaaziqbal.vip@gmail.com`), 8 tabs:
 
 ---
 
-## 🌐 Deploy — GitHub Pages
+## 🌐 Deploy — dual hosting (GitHub Pages + Firebase Hosting)
 
-Push to `main` → workflow [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) khud deploy karta hai:
+Same source, do ghar — dono auto-deploy hote hain `main` par push se.
 
-```text
-push → assemble _site/ (rsync, .git/docs/backup excluded) → upload-pages-artifact → deploy-pages
+| Host | URL | Workflow | Kaise |
+| --- | --- | --- | --- |
+| 🐙 **GitHub Pages** | [muaaz-iqbal.github.io/MIZANORAORG](https://muaaz-iqbal.github.io/MIZANORAORG/) | [`deploy-pages.yml`](.github/workflows/deploy-pages.yml) | rsync → `_site/` → `upload-pages-artifact` → `deploy-pages` |
+| 🔥 **Firebase Hosting** | [mizanoraorg.web.app](https://mizanoraorg.web.app) | [`deploy-firebase.yml`](.github/workflows/deploy-firebase.yml) | `action-hosting-deploy` → `live` channel |
+
+### GitHub Pages (one-time)
+`Settings → Pages → Build and deployment → Source: **GitHub Actions** → Save`
+
+### Firebase Hosting
+
+Repo me config tayyar hai — [`firebase.json`](firebase.json) (`public: "."`, cache + security headers, firestore/storage rules) aur [`.firebaserc`](.firebaserc) (`mizanoraorg`).
+
+**A. Manual (pehli baar test karne ke liye):**
+
+```bash
+npm i -g firebase-tools
+firebase login                       # mezanora.market@gmail.com se login karo
+firebase use mizanoraorg
+firebase deploy --only hosting       # → https://mizanoraorg.web.app
+firebase deploy --only firestore:rules,storage
 ```
 
-**One-time setting (agar site 404 de):**
-`Settings → Pages → Build and deployment → Source: **GitHub Actions** → Save`
+**B. Auto-deploy via GitHub Actions:**
+
+1. Firebase Console → ⚙️ *Project settings* → *Service accounts* → **Generate new private key** (JSON)
+2. GitHub repo → *Settings → Secrets and variables → Actions* → **New repository secret**
+   name: `FIREBASE_SERVICE_ACCOUNT` · value: wo poora JSON
+3. Bas — agla push `main` par live channel par deploy ho jayega.
+   *(Secret na ho to workflow skip ho jata hai, fail nahi hota.)*
+
+**C. Custom domain (optional):** Firebase Console → *Hosting → Add custom domain* → DNS me diya gaya TXT/A record add karo.
 
 Local test:
 
 ```bash
-python3 -m http.server 8080   # same files jo Pages par jaate hain
+python3 -m http.server 8080   # wahi files jo dono hosts par jaati hain
 ```
 
 ---
@@ -381,7 +416,7 @@ Source snapshot repo me bhi hai: [`backup/mizanora-platform-backup.zip`](backup/
 
 <div align="center">
 
-<a href="mailto:muaaziqbal.vip@gmail.com"><img src="https://img.shields.io/badge/Gmail-muaaziqbal.vip-d14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=05100b" alt="email" /></a>
+<a href="mailto:mezanora.market@gmail.com"><img src="https://img.shields.io/badge/Gmail-mezanora.market-d14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=05100b" alt="email" /></a>
 <a href="https://wa.me/923062015326"><img src="https://img.shields.io/badge/WhatsApp-%2B92_306_2015326-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=05100b" alt="whatsapp" /></a>
 <a href="https://github.com/muaaz-iqbal"><img src="https://img.shields.io/badge/GitHub-muaaz--iqbal-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=05100b" alt="github" /></a>
 <a href="https://youtube.com/@MuaazIqbalofficial"><img src="https://img.shields.io/badge/YouTube-@MuaazIqbalofficial-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=05100b" alt="youtube" /></a>
