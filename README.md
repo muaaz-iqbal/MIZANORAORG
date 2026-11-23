@@ -300,6 +300,27 @@ python3 -m http.server 8080   # wahi files jo dono hosts par jaati hain
 
 ---
 
+## 🔍 Google Search Console verification
+
+Verification token: `google-site-verification=jSBcl9CFtpuhhe3M778hOM3bGz0DvpJ3K0DLpJNP2CM`
+
+✅ **Repo me already installed** — do methods, dono live:
+
+| Method | File | Value |
+| --- | --- | --- |
+| HTML tag | har page ke `<head>` | `<meta name="google-site-verification" content="jSBcl9CFtpuhhe3M778hOM3bGz0DvpJ3K0DLpJNP2CM">` |
+| HTML file | `googlejSBcl9CFtpuhhe3M778hOM3bGz0DvpJ3K0DLpJNP2CM.html` | `google-site-verification: googlejSBcl9CFtpuhhe3M778hOM3bGz0DvpJ3K0DLpJNP2CM.html` |
+
+⚠️ **`.web.app` par DNS TXT record kaam nahi karta** — `web.app` Google ki domain hai, uska DNS aapke
+paas nahi. Search Console me **DNS / Domain property** wala dialog chhor dein aur **URL prefix** property
+banayein (`https://mizanoraorg.web.app/` → *HTML tag* → Verify). Poori guide:
+[`docs/VERIFY-DOMAIN.md`](docs/VERIFY-DOMAIN.md)
+
+Sitemap (verify hone ke baad submit karein):
+`https://mizanoraorg.web.app/sitemap.xml` · `https://muaaz-iqbal.github.io/MIZANORAORG/sitemap.xml`
+
+---
+
 ## 🎨 Brand & assets
 
 | Asset | File | Kahan use hota hai |
