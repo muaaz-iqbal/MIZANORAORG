@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 420" width="1400" height="420" role="img" aria-label="Mizanora Org — animated banner">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 420" width="1400" height="420" role="img" aria-label="Mizanora Platform — animated banner">
   <title>MIZANORA ORG</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05060f"/>
-      <stop offset="45%" stop-color="#0a0f2b"/>
-      <stop offset="100%" stop-color="#120a24"/>
+      <stop offset="0%" stop-color="#040b09"/>
+      <stop offset="45%" stop-color="#07130f"/>
+      <stop offset="100%" stop-color="#101a12"/>
     </linearGradient>
 
     <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="35%" stop-color="#818cf8"/>
-      <stop offset="65%" stop-color="#c084fc"/>
-      <stop offset="100%" stop-color="#fb7185"/>
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="35%" stop-color="#fcd34d"/>
+      <stop offset="65%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#10b981"/>
       <animate attributeName="x1" values="-1;0;-1" dur="9s" repeatCount="indefinite"/>
       <animate attributeName="x2" values="0;1;0" dur="9s" repeatCount="indefinite"/>
     </linearGradient>
@@ -26,27 +26,27 @@
     </linearGradient>
 
     <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#22d3ee"/>
-      <stop offset="70%" stop-color="#c084fc"/>
-      <stop offset="100%" stop-color="#fb7185" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#34d399"/>
+      <stop offset="70%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
     </linearGradient>
 
     <radialGradient id="blobA" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="blobB" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="blobC" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fb7185" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#fb7185" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
     </radialGradient>
 
     <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
-      <path d="M44 0H0V44" fill="none" stroke="#7dd3fc" stroke-opacity="0.10" stroke-width="1"/>
+      <path d="M44 0H0V44" fill="none" stroke="#6ee7b7" stroke-opacity="0.10" stroke-width="1"/>
     </pattern>
 
     <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
@@ -94,7 +94,7 @@
   </g>
 
   <!-- floating particles -->
-  <g fill="#e0f2fe">
+  <g fill="#fef9c3">
     <circle cx="140" cy="300" r="2.2" opacity="0.8"><animate attributeName="cy" values="300;240;300" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.15;0.9;0.15" dur="7s" repeatCount="indefinite"/></circle>
     <circle cx="330" cy="70" r="1.8" opacity="0.6"><animate attributeName="cy" values="70;130;70" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.8;0.1" dur="9s" repeatCount="indefinite"/></circle>
     <circle cx="520" cy="380" r="2.6" opacity="0.7"><animate attributeName="cy" values="380;320;380" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.85;0.1" dur="6s" repeatCount="indefinite"/></circle>
@@ -110,11 +110,11 @@
   <!-- badge chip -->
   <g transform="translate(700,64)" opacity="0">
     <animate attributeName="opacity" values="0;1;1" dur="2.4s" begin="0.2s" fill="freeze"/>
-    <rect x="-142" y="-19" width="284" height="38" rx="19" fill="#ffffff" fill-opacity="0.06" stroke="#7dd3fc" stroke-opacity="0.45"/>
+    <rect x="-142" y="-19" width="284" height="38" rx="19" fill="#ffffff" fill-opacity="0.06" stroke="#6ee7b7" stroke-opacity="0.45"/>
     <circle cx="-116" cy="0" r="4" fill="#4ade80">
       <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
     </circle>
-    <text x="6" y="5.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" letter-spacing="3.2" fill="#bae6fd">BUILD • SHIP • ITERATE</text>
+    <text x="6" y="5.5" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" letter-spacing="3.2" fill="#fde68a">OFFICIAL RECORD PLATFORM</text>
   </g>
 
   <!-- main title -->
@@ -133,8 +133,8 @@
 
   <!-- subtitle -->
   <text x="700" y="262" text-anchor="middle" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
-        font-size="21" letter-spacing="1.6" fill="#e2e8f0" opacity="0">
-    Muaaz Iqbal · Full-Stack &amp; Android Developer · Pakistan 🇵🇰
+        font-size="21" letter-spacing="1.6" fill="#e9f7f1" opacity="0">
+    Muaaz Iqbal · Founder of Mizanora · Kasur, Punjab 🇵🇰
     <animate attributeName="opacity" values="0;1" dur="1.4s" begin="1.6s" fill="freeze"/>
     <animateTransform attributeName="transform" type="translate" values="0 10;0 0" dur="1.4s" begin="1.6s" fill="freeze"/>
   </text>
@@ -146,18 +146,18 @@
   </path>
 
   <!-- three pillars -->
-  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" letter-spacing="2.4" fill="#a5b4fc" text-anchor="middle">
-    <text x="470" y="336" opacity="0">WEB PLATFORMS<animate attributeName="opacity" values="0;1" dur="0.8s" begin="2.8s" fill="freeze"/></text>
-    <text x="700" y="336" opacity="0">ANDROID APPS<animate attributeName="opacity" values="0;1" dur="0.8s" begin="3.2s" fill="freeze"/></text>
-    <text x="930" y="336" opacity="0">DEV TOOLS<animate attributeName="opacity" values="0;1" dur="0.8s" begin="3.6s" fill="freeze"/></text>
-    <g stroke="#818cf8" stroke-opacity="0.5">
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" letter-spacing="2.4" fill="#a7f3d0" text-anchor="middle">
+    <text x="470" y="336" opacity="0">PROJECT RECORD<animate attributeName="opacity" values="0;1" dur="0.8s" begin="2.8s" fill="freeze"/></text>
+    <text x="700" y="336" opacity="0">BLOG &amp; STATUS<animate attributeName="opacity" values="0;1" dur="0.8s" begin="3.2s" fill="freeze"/></text>
+    <text x="930" y="336" opacity="0">TEAM &amp; MEDIA<animate attributeName="opacity" values="0;1" dur="0.8s" begin="3.6s" fill="freeze"/></text>
+    <g stroke="#fcd34d" stroke-opacity="0.5">
       <path d="M556 331 H584" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.8s" begin="3s" fill="freeze"/></path>
       <path d="M816 331 H844" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.8s" begin="3.4s" fill="freeze"/></path>
     </g>
   </g>
 
   <!-- corner brackets -->
-  <g stroke="#22d3ee" stroke-opacity="0.55" stroke-width="2" fill="none">
+  <g stroke="#34d399" stroke-opacity="0.55" stroke-width="2" fill="none">
     <path d="M28 60 V28 H60"/>
     <path d="M1340 28 H1372 V60"/>
     <path d="M1372 360 V392 H1340"/>
@@ -165,5 +165,5 @@
   </g>
 
   <!-- vignette -->
-  <rect width="1400" height="420" fill="none" stroke="#0b1020" stroke-opacity="0.9" stroke-width="2"/>
+  <rect width="1400" height="420" fill="none" stroke="#04120d" stroke-opacity="0.9" stroke-width="2"/>
 </svg>

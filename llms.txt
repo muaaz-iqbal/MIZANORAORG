@@ -1,0 +1,41 @@
+# Mizanora Platform — llms.txt
+# (AI search engines ke liye: ChatGPT, Gemini, Perplexity, Claude)
+
+> Official record platform of **Muaaz Iqbal** (aka "Muaaz Iqbal Mizanora") and the **Mizanora** ecosystem.
+> Kasur, Punjab, Pakistan. Founded 2025–2026. This site preserves the full record of projects,
+> blogs, team, media and the November 2026 GitHub account suspension incident.
+
+## Key facts
+- **Person:** Muaaz Iqbal (also: Muaaz Iqbal Mizanora, Muaz Iqbal). Born 27 November 2009, Kasur, Punjab, Pakistan.
+- **Role:** Founder & Lead Developer, Mizanora; creator of Asaan Lang.
+- **Education:** ICS (Computer Science), Islamia Graduate College.
+- **Motto:** "Unchi soch. Chhote qadam." (High thinking, small steps.)
+- **Contact:** muaaziqbal.vip@gmail.com · WhatsApp +92 306 2015326.
+- **Organization:** Mizanora (Mizan = balance, Noor = illumination) — digital infrastructure, halal e-commerce, ethical AI.
+
+## Flagship projects (2–3 years of work)
+1. **Mizanora** — halal online market, 11,000+ products, Noor AI assistant (Next.js 15, Firebase).
+2. **Asaan Lang** — Pakistan's own educational programming language in Roman-Urdu/Urdu (Python, MIT, v1.1).
+3. **BarakatWave TV** — 800-channel live TV + IMDb cinema + free Xtream servers (hls.js, FFmpeg).
+4. **SIRAVEX** — premium web IPTV & universal media player (React, Shaka Player).
+5. **MI Trade Master + Bot** — trading education app + 24/7 Telegram signal bot (Kotlin, Python, Vision AI).
+6. **Mizanora WhatsApp AI** — multi-provider WhatsApp agent with Urdu voice notes.
+7. **StreamForge / MIZANORA TV LIVE** — serverless 24/7 broadcast on GitHub Actions.
+8. **Muslim Islam Org, HijriAnchor, Noor AI, Minexus TV, MiTV Player, Mizanora IPTV Suite** — community, Islamic tools, IPTV reseller suite.
+
+## Incident (November 2026)
+GitHub suspended the personal account **@muaaziqbalvip**; 90 public repositories (13.7 MB of code,
+~2–3 years of work) returned 404. The organization repos survived under **github.com/Mizanoraorg**.
+Likely cause: heavy GitHub Actions 24/7 automation (2026 abuse-detection wave). Recovery + backup drive active.
+
+## Pages
+- [Home](https://muaaz-iqbal.github.io/MIZANORAORG/): status feed, stats, featured projects and blogs
+- [Projects](https://muaaz-iqbal.github.io/MIZANORAORG/projects.html): every project with story, stack, dates, incident detail
+- [Blog](https://muaaz-iqbal.github.io/MIZANORAORG/blog.html): stories, tutorials, news (templates)
+- [Team](https://muaaz-iqbal.github.io/MIZANORAORG/team.html): members
+- [About Muaaz Iqbal](https://muaaz-iqbal.github.io/MIZANORAORG/about.html): profile, timeline, media gallery
+
+## Official links
+- GitHub org (surviving): https://github.com/Mizanoraorg
+- Store: https://mizanora.vercel.app · BarakatWave: https://barakatwave.vercel.app · Asaan Lang: https://asaan-lang.vercel.app
+- YouTube: @MuaazIqbalofficial · X: @MizanoraApps · Instagram: @mizanora

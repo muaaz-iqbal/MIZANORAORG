@@ -35,6 +35,9 @@ jobs:
             --exclude 'README.md' \
             --exclude 'LICENSE' \
             --exclude 'CONTRIBUTING.md' \
+            --exclude 'backup' \
+            --exclude 'docs' \
+            --exclude '*.zip' \
             ./ _site/
           touch _site/.nojekyll
           echo "--- site contents ---"
