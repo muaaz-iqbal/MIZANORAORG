@@ -53,7 +53,7 @@ Auto-deploy ke liye repo secret `FIREBASE_SERVICE_ACCOUNT` (service account JSON
 3. Site live: `https://muaaz-iqbal.github.io/MIZANORAORG/`
 4. **IMPORTANT:** `assets/js/data.js` me `SITE_URL` ko apne asli Pages URL se badlein.
 
-## 🔥 Firebase Setup (auth + firestore + storage)
+## 🔥 Firebase Setup (auth + firestore)  · storage NOT used
 
 Config `assets/js/data.js` me already mojood hai (project: **mizanoraorg**). Baqi steps:
 
@@ -67,10 +67,10 @@ Config `assets/js/data.js` me already mojood hai (project: **mizanoraorg**). Baq
    npm i -g firebase-tools
    firebase login
    firebase use mizanoraorg
-   firebase deploy --only firestore:rules,storage
+   firebase deploy --only firestore:rules
    ```
    *(ya Rules tab me firestore.rules ka content paste kar dein)*
-5. **Storage** → Get started → `storage.rules` paste/deploy
+5. **Storage** — use nahi hoti. Media sirf links se (admin → Media URL).
 
 > Bina Firebase ke bhi site chalti hai (seed data + localStorage mode) — lekin admin writes
 > aur media upload ke liye Firebase zaroori hai.
@@ -115,7 +115,6 @@ mizanora-platform/
 ├── llms.txt            # AI-search record
 ├── manifest.json       # PWA
 ├── firestore.rules     # Owner-only writes
-├── storage.rules       # Media upload rules
 └── PROMPT.md           # 📜 Master mega-prompt (blueprint)
 ```
 

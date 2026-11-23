@@ -86,8 +86,8 @@ GitHub ki abuse policy *"Actions for general computing purposes"* ke khilaaf. 20
 | 💾 **Backup / Restore** | Full **JSON export + import** — ek click me saara content, Google Drive par rakhne ke liye |
 | 🗺️ **Auto Sitemap** | Admin se generate → `sitemap.xml` download / copy / commit |
 | 🔍 **SEO pack** | JSON-LD (`Person` · `Organization` · `WebSite`), OG + Twitter cards, canonical URLs, `robots.txt`, **`llms.txt`** (AI search) |
-| 📦 **PWA** | `manifest.json` — phone par install ho jati hai, offline-capable shell |
-| 🎨 **Design system** | Emerald + gold aurora theme, glassmorphism cards, animated ticker, responsive (mobile-first), `prefers-reduced-motion` respected |
+| 📦 **PWA** | `manifest.json` — official gold mark icons, shortcuts, phone par install |
+| 🎨 **Design system + brand mark** | Emerald + gold aurora theme, glassmorphism cards, animated ticker, responsive (mobile-first), `prefers-reduced-motion` respected |
 | 🛡️ **Graceful degradation** | Firebase na ho to bhi chalti hai — `firebase → localStorage → seed` fallback chain |
 
 ---
@@ -137,14 +137,15 @@ Yeh **zero-build** hai — koi bundler, koi `npm install`, koi framework nahi. S
 
 | Module | Lines | Zimmedari |
 | --- | ---: | --- |
-| `assets/js/data.js` | ~380 | `SITE_URL`, Firebase config, **seed content** (status, 17 projects, 5 blogs, team, timeline, gallery) |
+| `assets/js/data.js` | ~380 | `SITE_URL`, Firebase config, **seed content** (status, 17 projects, 10 blogs, team, timeline, gallery) |
 | `assets/js/store.js` | ~165 | Data layer — `init · list · save · remove · signInGoogle · signOut · uploadFile · exportAll · importAll` |
 | `assets/js/main.js` | ~397 | Page rendering, nav, ticker, filters, modals, markdown-lite |
 | `assets/js/admin.js` | ~392 | Admin dashboard, forms, CRUD, upload, JSON backup, sitemap generator |
 | `assets/css/style.css` | ~407 | Emerald + gold design system, animations, responsive layout |
 
 > **Note:** Firebase client config public hona normal hai (web apps me design hi aisa hai) —
-> asli security **`firestore.rules` + `storage.rules`** se aati hai, jahan writes sirf owner email par allowed hain.
+> asli security **`firestore.rules`** se aati hai, jahan writes sirf owner email par allowed hain.
+> **Firebase Storage use nahi hoti** — media (image / video / audio) sirf **links** se aata hai, koi upload quota nahi, koi bill nahi.
 
 ---
 
@@ -172,7 +173,6 @@ MIZANORAORG/
 ├── robots.txt              # 🤖 crawlers (AI bots welcome, admin blocked)
 ├── llms.txt                # 🧠 AI-search fact sheet
 ├── firestore.rules         # 🔐 owner-only writes
-├── storage.rules           # 🔐 media upload rules
 ├── .nojekyll               # Pages: skip Jekyll
 ├── docs/
 │   ├── BUILD-PROMPT.md     # 📜 master blueprint prompt (v1.0)
@@ -214,7 +214,7 @@ Phir kholo 👉 **http://localhost:8080** — bina Firebase ke bhi poori site ch
 Config `assets/js/data.js` me already hai (project: **`mizanoraorg`**), aur repo me
 `firebase.json` + `.firebaserc` bhi mojood hain — `firebase use` khud sahi project utha lega.
 
-**Owner / login account:** `mezanora.market@gmail.com` *(sirf yehi email admin panel me sign in kar sakti hai — `data.js` → `OWNER_EMAIL`, `firestore.rules`, `storage.rules` teeno me yahi lock hai)*
+**Owner / login account:** `mezanora.market@gmail.com` *(sirf yehi email admin panel me sign in kar sakti hai — `data.js` → `OWNER_EMAIL` aur `firestore.rules` dono me yahi lock hai)*
 
 1. **Firebase Console** → [console.firebase.google.com](https://console.firebase.google.com) → project `mizanoraorg`
 2. **Authentication → Sign-in method → Google** → Enable
@@ -228,10 +228,10 @@ Config `assets/js/data.js` me already hai (project: **`mizanoraorg`**), aur repo
    npm i -g firebase-tools
    firebase login
    firebase use mizanoraorg
-   firebase deploy --only firestore:rules,storage
+   firebase deploy --only firestore:rules
    ```
    *(ya Console ke Rules tab me file ka content paste kar do)*
-5. **Storage** → Get started → `storage.rules` paste / deploy
+5. **Storage** — zaroorat **nahi**. Media gallery `admin.html → 🖼️ Media` me **sirf link** (image/video/audio URL) se chalti hai.
 
 ✅ Uske baad `admin.html` par Google Sign-In karo — sirf **owner email** ko write access milega.
 
@@ -270,7 +270,7 @@ Same source, do ghar — dono auto-deploy hote hain `main` par push se.
 
 ### Firebase Hosting
 
-Repo me config tayyar hai — [`firebase.json`](firebase.json) (`public: "."`, cache + security headers, firestore/storage rules) aur [`.firebaserc`](.firebaserc) (`mizanoraorg`).
+Repo me config tayyar hai — [`firebase.json`](firebase.json) (`public: "."`, redirects, cache + security headers, `firestore` rules) aur [`.firebaserc`](.firebaserc) (`mizanoraorg`).
 
 **A. Manual (pehli baar test karne ke liye):**
 
@@ -279,7 +279,7 @@ npm i -g firebase-tools
 firebase login                       # mezanora.market@gmail.com se login karo
 firebase use mizanoraorg
 firebase deploy --only hosting       # → https://mizanoraorg.web.app
-firebase deploy --only firestore:rules,storage
+firebase deploy --only firestore:rules
 ```
 
 **B. Auto-deploy via GitHub Actions:**
@@ -297,6 +297,45 @@ Local test:
 ```bash
 python3 -m http.server 8080   # wahi files jo dono hosts par jaati hain
 ```
+
+---
+
+## 🎨 Brand & assets
+
+| Asset | File | Kahan use hota hai |
+| --- | --- | --- |
+| **Official mark** (gold M + sparkle) | `assets/img/logo-512.png` · `logo-192.png` · `logo-64.png` | nav, footer, PWA icons, hero |
+| Favicon | `favicon.ico` · `assets/img/favicon-32.png` | browser tab, bookmarks |
+| Apple touch icon | `assets/img/apple-touch-icon.png` | iOS home screen |
+| Social card (1200×630) | `assets/img/og-cover.jpg` | WhatsApp / X / Facebook / LinkedIn previews |
+| Blog covers (1200×675) | `assets/img/blog/*.jpg` | 10 article covers |
+
+> Palette: **emerald `#10b981` + gold `#d4af37`** on near-black `#060d0a`. Motion respects `prefers-reduced-motion`.
+
+---
+
+## 🖼️ Media = links only (no Storage)
+
+Firebase Storage **deliberately band** hai:
+
+- Admin → 🖼️ **Media** → type (image / video / audio) + **URL** + caption → save
+- Koi bhi link chalega: CDN image, Google Drive ka direct link, `.mp4`, `.mp3`, YouTube thumbnail
+- Faide: **zero upload cost**, zero quota, zero egress bill, site ka payload chhota
+- Blog covers bhi usi tarah URL se aate hain (seed me local `assets/img/blog/*.jpg`)
+
+---
+
+## 🔁 Auto SEO (sitemap + RSS)
+
+`scripts/generate-seo.mjs` seed content se **khud** generate karta hai:
+
+- `sitemap.xml` — 5 pages + har blog article (`?slug=` deep link)
+- `rss.xml` — latest 20 articles
+
+Kab chalta hai:
+1. **CI** — `.github/workflows/seo.yml`, jab bhi `data.js` badle → files regenerate + auto-commit
+2. **Deploy** — Pages aur Firebase dono workflows me build se pehle
+3. **Local** — `node scripts/generate-seo.mjs`
 
 ---
 

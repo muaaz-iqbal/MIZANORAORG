@@ -37,11 +37,20 @@ jobs:
             --exclude 'CONTRIBUTING.md' \
             --exclude 'backup' \
             --exclude 'docs' \
+            --exclude 'scripts' \
             --exclude '*.zip' \
             ./ _site/
           touch _site/.nojekyll
           echo "--- site contents ---"
           find _site -maxdepth 2 -type f | sort
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate SEO files
+        run: node scripts/generate-seo.mjs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
