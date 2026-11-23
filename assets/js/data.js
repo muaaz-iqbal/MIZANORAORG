@@ -8,7 +8,7 @@ window.MZ = {
   OWNER_EMAIL: "mezanora.market@gmail.com",
   OWNER_NAME: "Muaaz Iqbal",
   // ⬇️ GitHub Pages par deploy ke baad ye URL badlein (repo ka real URL)
-  SITE_URL: "https://muaaz-iqbal.github.io/MIZANORAORG",
+  SITE_URL: "https://mizanoraorg.web.app",
   SITE_NAME: "Mizanora Platform",
   FIREBASE_CONFIG: {
     apiKey: "AIzaSyB81CTz3uDtKCyQJMpNr0uUHseKCkq93k4",

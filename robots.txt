@@ -1,5 +1,5 @@
 # Mizanora Platform — robots.txt
-# https://muaaz-iqbal.github.io/MIZANORAORG/
+# https://mizanoraorg.web.app/
 
 User-agent: *
 Allow: /
@@ -18,5 +18,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://muaaz-iqbal.github.io/MIZANORAORG/sitemap.xml
 Sitemap: https://mizanoraorg.web.app/sitemap.xml

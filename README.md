@@ -6,9 +6,9 @@
 
 <br />
 
-<a href="https://muaaz-iqbal.github.io/MIZANORAORG/"><img src="https://img.shields.io/badge/🌐_LIVE_SITE-Open-10b981?style=for-the-badge&labelColor=05100b" alt="Live site" /></a>
-<a href="https://muaaz-iqbal.github.io/MIZANORAORG/projects.html"><img src="https://img.shields.io/badge/🚀_PROJECTS-17_builds-d4af37?style=for-the-badge&labelColor=05100b" alt="Projects" /></a>
-<a href="https://muaaz-iqbal.github.io/MIZANORAORG/blog.html"><img src="https://img.shields.io/badge/✍️_BLOG-Stories_&_guides-34d399?style=for-the-badge&labelColor=05100b" alt="Blog" /></a>
+<a href="https://mizanoraorg.web.app/"><img src="https://img.shields.io/badge/🌐_LIVE_SITE-Open-10b981?style=for-the-badge&labelColor=05100b" alt="Live site" /></a>
+<a href="https://mizanoraorg.web.app/projects.html"><img src="https://img.shields.io/badge/🚀_PROJECTS-17_builds-d4af37?style=for-the-badge&labelColor=05100b" alt="Projects" /></a>
+<a href="https://mizanoraorg.web.app/blog.html"><img src="https://img.shields.io/badge/✍️_BLOG-Stories_&_guides-34d399?style=for-the-badge&labelColor=05100b" alt="Blog" /></a>
 <a href="https://mizanoraorg.web.app"><img src="https://img.shields.io/badge/🔥_FIREBASE_HOSTING-mizanoraorg.web.app-fbbf24?style=for-the-badge&logo=firebase&logoColor=white&labelColor=05100b" alt="Firebase Hosting" /></a>
 <a href="https://github.com/muaaz-iqbal"><img src="https://img.shields.io/badge/GitHub-muaaz--iqbal-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=05100b" alt="GitHub" /></a>
 
@@ -66,7 +66,7 @@ GitHub ki abuse policy *"Actions for general computing purposes"* ke khilaaf. 20
 2. 🏠 **Record apni website par** — ye platform
 3. 🧾 Har project ka **date-wise history** — kya bana, kab gira, kaise utha
 
-> Poori detail blog me: [`blog.html?slug=github-suspension-incident-2026`](https://muaaz-iqbal.github.io/MIZANORAORG/blog.html?slug=github-suspension-incident-2026)
+> Poori detail blog me: [`blog.html?slug=github-suspension-incident-2026`](https://mizanoraorg.web.app/blog.html?slug=github-suspension-incident-2026)
 
 </details>
 
@@ -96,12 +96,12 @@ GitHub ki abuse policy *"Actions for general computing purposes"* ke khilaaf. 20
 
 | Page | URL | Kya milega |
 | --- | --- | --- |
-| 🏠 Home | [`/`](https://muaaz-iqbal.github.io/MIZANORAORG/) | Hero, stats, status ticker, featured projects, latest blogs |
-| 🚀 Projects | [`/projects.html`](https://muaaz-iqbal.github.io/MIZANORAORG/projects.html) | Saare 17 projects — filters (Active / Past / Affected) + modal detail |
-| ✍️ Blog | [`/blog.html`](https://muaaz-iqbal.github.io/MIZANORAORG/blog.html) | 5 seed articles — incident, Asaan Lang, founder story, backup guide, ecosystem map |
-| 🤝 Team | [`/team.html`](https://muaaz-iqbal.github.io/MIZANORAORG/team.html) | Members + contact links |
-| 👤 About | [`/about.html`](https://muaaz-iqbal.github.io/MIZANORAORG/about.html) | Muaaz Iqbal — profile, timeline, gallery, numbers |
-| ⚙️ Admin | [`/admin.html`](https://muaaz-iqbal.github.io/MIZANORAORG/admin.html) | Owner-only panel (Google Sign-In) · `robots.txt` me blocked |
+| 🏠 Home | [`/`](https://mizanoraorg.web.app/) | Hero, stats, status ticker, featured projects, latest blogs |
+| 🚀 Projects | [`/projects.html`](https://mizanoraorg.web.app/projects.html) | Saare 17 projects — filters (Active / Past / Affected) + modal detail |
+| ✍️ Blog | [`/blog.html`](https://mizanoraorg.web.app/blog.html) | 5 seed articles — incident, Asaan Lang, founder story, backup guide, ecosystem map |
+| 🤝 Team | [`/team.html`](https://mizanoraorg.web.app/team.html) | Members + contact links |
+| 👤 About | [`/about.html`](https://mizanoraorg.web.app/about.html) | Muaaz Iqbal — profile, timeline, gallery, numbers |
+| ⚙️ Admin | [`/admin.html`](https://mizanoraorg.web.app/admin.html) | Owner-only panel (Google Sign-In) · `robots.txt` me blocked |
 
 ---
 
@@ -262,8 +262,8 @@ Same source, do ghar — dono auto-deploy hote hain `main` par push se.
 
 | Host | URL | Workflow | Kaise |
 | --- | --- | --- | --- |
-| 🐙 **GitHub Pages** | [muaaz-iqbal.github.io/MIZANORAORG](https://muaaz-iqbal.github.io/MIZANORAORG/) | [`deploy-pages.yml`](.github/workflows/deploy-pages.yml) | rsync → `_site/` → `upload-pages-artifact` → `deploy-pages` |
-| 🔥 **Firebase Hosting** | [mizanoraorg.web.app](https://mizanoraorg.web.app) | [`deploy-firebase.yml`](.github/workflows/deploy-firebase.yml) | `action-hosting-deploy` → `live` channel |
+| 🐙 **GitHub Pages** *(mirror)* | [muaaz-iqbal.github.io/MIZANORAORG](https://muaaz-iqbal.github.io/MIZANORAORG/) | [`deploy-pages.yml`](.github/workflows/deploy-pages.yml) | rsync → `_site/` → `upload-pages-artifact` → `deploy-pages` |
+| 🔥 **Firebase Hosting** *(canonical)* | [mizanoraorg.web.app](https://mizanoraorg.web.app) | [`deploy-firebase.yml`](.github/workflows/deploy-firebase.yml) | `action-hosting-deploy` → `live` channel |
 
 ### GitHub Pages (one-time)
 `Settings → Pages → Build and deployment → Source: **GitHub Actions** → Save`
@@ -317,7 +317,7 @@ banayein (`https://mizanoraorg.web.app/` → *HTML tag* → Verify). Poori guide
 [`docs/VERIFY-DOMAIN.md`](docs/VERIFY-DOMAIN.md)
 
 Sitemap (verify hone ke baad submit karein):
-`https://mizanoraorg.web.app/sitemap.xml` · `https://muaaz-iqbal.github.io/MIZANORAORG/sitemap.xml`
+`https://mizanoraorg.web.app/sitemap.xml` · `https://mizanoraorg.web.app/sitemap.xml`
 
 ---
 
@@ -386,7 +386,7 @@ Kab chalta hai:
 
 > **+ 4 surviving repos** in the org (`MIZANORA` · `MIZANORAAI` · `miznaoraiptv` · `Mizanora-org`) — suspension ke baad bacha hua ghar.
 >
-> Har project ka full story + incident detail: **[projects.html](https://muaaz-iqbal.github.io/MIZANORAORG/projects.html)**
+> Har project ka full story + incident detail: **[projects.html](https://mizanoraorg.web.app/projects.html)**
 > · AI/LLM ke liye summary: **[`llms.txt`](llms.txt)**
 
 ---
@@ -422,7 +422,7 @@ Kab chalta hai:
 - **OG + Twitter cards** — har page par share-ready preview
 - **Canonical URLs** — duplicate content se bachne ke liye
 
-**Google me laane ke liye:** Search Console → property `https://muaaz-iqbal.github.io/MIZANORAORG/` → Sitemaps me `sitemap.xml` submit → URL Inspection se home, projects, blog, about par **Request Indexing**.
+**Google me laane ke liye:** Search Console → property `https://mizanoraorg.web.app/` → Sitemaps me `sitemap.xml` submit → URL Inspection se home, projects, blog, about par **Request Indexing**.
 
 ---
 

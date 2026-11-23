@@ -50,7 +50,7 @@ jobs:
           node-version: "20"
 
       - name: Generate SEO files
-        run: node scripts/generate-seo.mjs
+        run: node scripts/generate-seo.mjs --site=https://muaaz-iqbal.github.io/MIZANORAORG
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
