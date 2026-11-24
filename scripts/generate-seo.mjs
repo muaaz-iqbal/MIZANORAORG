@@ -345,6 +345,25 @@ if (existsSync(blogDir)) {
 }
 for (const b of blogs) writeFileSync(join(blogDir, `${b.slug}.html`), articlePage(b));
 
+/* clean folder URL /blog/ → redirect to the article list (avoids a 404 landing page) */
+writeFileSync(join(blogDir, "index.html"), `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mizanora Blog — Muaaz Iqbal ki kahaniyan, guides &amp; updates</title>
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="${SITE}/blog.html">
+  <meta http-equiv="refresh" content="0; url=../blog.html">
+  <meta name="description" content="Mizanora Platform blog — incidents, tutorials, founder story aur infra guides.">
+  <script>location.replace("../blog.html");</script>
+</head>
+<body style="background:#060d0a;color:#eaf4ee;font-family:system-ui;padding:40px">
+  <p><a href="../blog.html" style="color:#d4af37">Blog par jayein →</a></p>
+</body>
+</html>
+`);
+
 console.log(`✅ ${SITE}`);
 console.log(`   sitemap-index.xml  → 2 child sitemaps`);
 console.log(`   sitemap.xml        → ${pages.length} core pages`);

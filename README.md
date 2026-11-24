@@ -98,7 +98,7 @@ GitHub ki abuse policy *"Actions for general computing purposes"* ke khilaaf. 20
 | --- | --- | --- |
 | 🏠 Home | [`/`](https://mizanoraorg.web.app/) | Hero, stats, status ticker, featured projects, latest blogs |
 | 🚀 Projects | [`/projects.html`](https://mizanoraorg.web.app/projects.html) | Saare 17 projects — filters (Active / Past / Affected) + modal detail |
-| ✍️ Blog | [`/blog.html`](https://mizanoraorg.web.app/blog.html) | 5 seed articles — incident, Asaan Lang, founder story, backup guide, ecosystem map |
+| ✍️ Blog | [`/blog.html`](https://mizanoraorg.web.app/blog.html) | 14 articles — incident, Asaan Lang, founder story, backup & appeal guides, ecosystem map |
 | 🤝 Team | [`/team.html`](https://mizanoraorg.web.app/team.html) | Members + contact links |
 | 👤 About | [`/about.html`](https://mizanoraorg.web.app/about.html) | Muaaz Iqbal — profile, timeline, gallery, numbers |
 | ⚙️ Admin | [`/admin.html`](https://mizanoraorg.web.app/admin.html) | Owner-only panel (Google Sign-In) · `robots.txt` me blocked |
@@ -137,7 +137,7 @@ Yeh **zero-build** hai — koi bundler, koi `npm install`, koi framework nahi. S
 
 | Module | Lines | Zimmedari |
 | --- | ---: | --- |
-| `assets/js/data.js` | ~380 | `SITE_URL`, Firebase config, **seed content** (status, 17 projects, 10 blogs, team, timeline, gallery) |
+| `assets/js/data.js` | ~380 | `SITE_URL`, Firebase config, **seed content** (status, 17 projects, 14 blogs, team, timeline, gallery) |
 | `assets/js/store.js` | ~165 | Data layer — `init · list · save · remove · signInGoogle · signOut · uploadFile · exportAll · importAll` |
 | `assets/js/main.js` | ~397 | Page rendering, nav, ticker, filters, modals, markdown-lite |
 | `assets/js/admin.js` | ~392 | Admin dashboard, forms, CRUD, upload, JSON backup, sitemap generator |
@@ -354,9 +354,11 @@ Structure same as the MIZANORA (Next.js) repo — **sitemap index + per-section 
 | --- | --- | --- |
 | **`/sitemap-index.xml`** | ⭐ **Search Console me submit YEH karein** | 2 child sitemaps |
 | `/sitemap.xml` | core pages (home, projects, blog, about, team) | 5 |
-| `/sitemaps/blog.xml` | har article + `<image:image>` cover (image sitemap) | 11 |
-| `/rss.xml` | RSS 2.0 feed (`media:content` covers) | 10 items |
-| `/blog/<slug>.html` | **real static article pages** — server-rendered HTML, JSON-LD `BlogPosting` + `BreadcrumbList` | 10 |
+| `/sitemaps/blog.xml` | har article + `<image:image>` cover (image sitemap) | 15 |
+| `/rss.xml` | RSS 2.0 feed (`media:content` covers) | 14 items |
+| `/blog/<slug>.html` | **real static article pages** — server-rendered HTML, JSON-LD `BlogPosting` + `BreadcrumbList` | 14 |
+| `/blog/` | clean folder URL → redirects to `/blog.html` | — |
+| `/<indexnow-key>.txt` | IndexNow key — har deploy par Bing/Yandex ko ping | — |
 
 **Host-aware** — `sitemap.xml`, child sitemaps, rss aur robots sab usi host ke URLs se bante hain:
 
@@ -438,6 +440,7 @@ Kab chalta hai:
 - **JSON-LD** — `Person` · `Organization` · `WebSite` + `BreadcrumbList`
 - **OG + Twitter cards** — har page par share-ready preview
 - **Canonical URLs** — duplicate content se bachne ke liye
+- **IndexNow** — har deploy par `scripts/ping-indexnow.mjs` Bing/Yandex/Seznam ko saare URLs instantly bhejta hai (Google ke liye sitemap index)
 
 **Google me laane ke liye:** Search Console → property `https://mizanoraorg.web.app/` → Sitemaps me `sitemap.xml` submit → URL Inspection se home, projects, blog, about par **Request Indexing**.
 

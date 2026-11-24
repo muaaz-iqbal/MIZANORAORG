@@ -96,6 +96,50 @@
     </image:image>
   </url>
   <url>
+    <loc>https://mizanoraorg.web.app/blog/mizanora-store-11000-products.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/market.jpg</image:loc>
+      <image:title>Mizanora Store: 11,000+ Products Kaise Manage Hote Hain</image:title>
+      <image:caption>11,000+ products, flat delivery aur cash on delivery — lekin asli kaam catalog ke peeche hai: duplicates, dead stock, aur honest pricing.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/barakatwave-800-channels.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/livetv.jpg</image:loc>
+      <image:title>BarakatWave TV: 800 Channels, Ek Browser</image:title>
+      <image:caption>800 live channels, multi-server failover, IMDb cinema aur free Xtream server — sab browser me, bina app install.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/github-appeal-recovery-guide.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/recovery.jpg</image:loc>
+      <image:title>GitHub Account Suspend? Appeal Aur Recovery Ka Tareeqa</image:title>
+      <image:caption>Account suspend ho gaya — 90 repos 404. Practical checklist: appeal kaise likhein, kya bachaya ja sakta hai, aur dobara aisa na ho.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/asaan-lang-web-compiler.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/web-compiler.jpg</image:loc>
+      <image:title>Asaan Lang Se HTML Website — Web Compiler Kaise Kaam Karta Hai</image:title>
+      <image:caption>Ek command me Roman-Urdu code se poori HTML website — lexer se codegen tak, sab kuch samjhaya hua.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://mizanoraorg.web.app/blog/founder-story-muaaz-iqbal.html</loc>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
