@@ -317,7 +317,7 @@ banayein (`https://mizanoraorg.web.app/` → *HTML tag* → Verify). Poori guide
 [`docs/VERIFY-DOMAIN.md`](docs/VERIFY-DOMAIN.md)
 
 Sitemap (verify hone ke baad submit karein):
-`https://mizanoraorg.web.app/sitemap.xml` · `https://mizanoraorg.web.app/sitemap.xml`
+`https://mizanoraorg.web.app/sitemap-index.xml`
 
 ---
 
@@ -346,17 +346,33 @@ Firebase Storage **deliberately band** hai:
 
 ---
 
-## 🔁 Auto SEO (sitemap + RSS)
+## 🔁 Auto SEO (sitemaps + static articles)
 
-`scripts/generate-seo.mjs` seed content se **khud** generate karta hai:
+Structure same as the MIZANORA (Next.js) repo — **sitemap index + per-section sitemaps**:
 
-- `sitemap.xml` — 5 pages + har blog article (`?slug=` deep link)
-- `rss.xml` — latest 20 articles
+| File | Kya | URL count |
+| --- | --- | --- |
+| **`/sitemap-index.xml`** | ⭐ **Search Console me submit YEH karein** | 2 child sitemaps |
+| `/sitemap.xml` | core pages (home, projects, blog, about, team) | 5 |
+| `/sitemaps/blog.xml` | har article + `<image:image>` cover (image sitemap) | 11 |
+| `/rss.xml` | RSS 2.0 feed (`media:content` covers) | 10 items |
+| `/blog/<slug>.html` | **real static article pages** — server-rendered HTML, JSON-LD `BlogPosting` + `BreadcrumbList` | 10 |
+
+**Host-aware** — `sitemap.xml`, child sitemaps, rss aur robots sab usi host ke URLs se bante hain:
+
+```bash
+node scripts/generate-seo.mjs                                      # canonical (data.js SITE_URL)
+node scripts/generate-seo.mjs --site=https://mizanoraorg.web.app   # Firebase deploy
+node scripts/generate-seo.mjs --site=https://muaaz-iqbal.github.io/MIZANORAORG  # Pages deploy
+```
 
 Kab chalta hai:
-1. **CI** — `.github/workflows/seo.yml`, jab bhi `data.js` badle → files regenerate + auto-commit
-2. **Deploy** — Pages aur Firebase dono workflows me build se pehle
+1. **CI** — `.github/workflows/seo.yml` (jab bhi `data.js` badle) → regenerate + auto-commit
+2. **Deploy** — Pages aur Firebase dono workflows build se pehle
 3. **Local** — `node scripts/generate-seo.mjs`
+
+> Blog cards ab clean URL par jate hain: `/blog/platform-v2-live.html` (koi `?slug=` query nahi).
+> Purane `blog.html?slug=…` links bhi kaam karte hain.
 
 ---
 
@@ -415,7 +431,8 @@ Kab chalta hai:
 
 ## 🔍 SEO + AI search
 
-- **`sitemap.xml`** — saare pages, admin se auto-regenerate
+- **`sitemap-index.xml`** — sitemap index (Google/Bing isi ko submit karein)
+- **`sitemap.xml`** + **`sitemaps/blog.xml`** — core pages + har article (image sitemap ke saath)
 - **`robots.txt`** — crawlers allow, `admin.html` disallow, AI bots (GPTBot · ClaudeBot · PerplexityBot · Google-Extended) welcome
 - **`llms.txt`** — AI search (ChatGPT, Gemini, Perplexity, Claude) ke liye structured fact sheet
 - **JSON-LD** — `Person` · `Organization` · `WebSite` + `BreadcrumbList`

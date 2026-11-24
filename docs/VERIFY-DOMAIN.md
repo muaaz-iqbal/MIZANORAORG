@@ -54,19 +54,23 @@ Ab `sitemap.xml`, `rss.xml` **aur** `robots.txt` — teeno usi host ke URLs se b
 ## ✅ Ab kya karein (2 minute)
 
 1. Search Console → property `https://mizanoraorg.web.app/`
-2. **Sitemaps** → `sitemap.xml` dobara submit karein
+2. **Sitemaps** → **`sitemap-index.xml`** submit karein *(index khud /sitemap.xml aur /sitemaps/blog.xml Google ko de deta hai)*
    *(pehle wali row delete karna zaroori nahi — Google khud re-fetch karega, par fresh submit foran queue karta hai)*
 3. **URL Inspection** → `https://mizanoraorg.web.app/` → **Request Indexing**
-4. 24–48 ghante me status **Success** + *discovered pages 15* dikhna chahiye
-   (5 pages + 10 blog articles)
+4. 24–48 ghante me status **Success** + *discovered pages 16* dikhna chahiye
+   (5 core pages + blog list + 10 static articles)
 
 > `rss.xml` sitemap ki tarah submit karein to bhi chalega (Google RSS 2.0 feeds accept karta hai).
 
 ### Live sanity check
 
 ```bash
-curl -s https://mizanoraorg.web.app/sitemap.xml | head -5
-# → <loc>https://mizanoraorg.web.app/</loc>  ← yahi hona chahiye
+curl -s https://mizanoraorg.web.app/sitemap-index.xml
+# → <loc>https://mizanoraorg.web.app/sitemap.xml</loc>
+# → <loc>https://mizanoraorg.web.app/sitemaps/blog.xml</loc>
+
+curl -s https://mizanoraorg.web.app/sitemaps/blog.xml | head -8
+# → <loc>https://mizanoraorg.web.app/blog/<slug>.html</loc>
 
 curl -s https://mizanoraorg.web.app/robots.txt | grep Sitemap
 # → Sitemap: https://mizanoraorg.web.app/sitemap.xml

@@ -34,12 +34,12 @@ jobs:
       - name: Commit if changed
         run: |
           set -euo pipefail
-          if git diff --quiet -- sitemap.xml rss.xml; then
+          git config user.name "mizanora-bot"
+          git config user.email "mezanora.market@gmail.com"
+          git add -A sitemap.xml sitemap-index.xml rss.xml robots.txt sitemaps blog
+          if git diff --cached --quiet; then
             echo "No SEO changes."
             exit 0
           fi
-          git config user.name "mizanora-bot"
-          git config user.email "mezanora.market@gmail.com"
-          git add sitemap.xml rss.xml
-          git commit -m "chore(seo): auto-regenerate sitemap + rss [skip ci]"
+          git commit -m "chore(seo): auto-regenerate sitemaps, rss + blog pages [skip ci]"
           git push
