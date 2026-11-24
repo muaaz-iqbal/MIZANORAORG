@@ -50,3 +50,7 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: mizanoraorg
           channelId: live
+
+      - name: Ping IndexNow (Bing / Yandex / Seznam)
+        continue-on-error: true
+        run: node scripts/ping-indexnow.mjs --site=https://mizanoraorg.web.app

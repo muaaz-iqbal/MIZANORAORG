@@ -57,10 +57,19 @@ Ab `sitemap.xml`, `rss.xml` **aur** `robots.txt` — teeno usi host ke URLs se b
 2. **Sitemaps** → **`sitemap-index.xml`** submit karein *(index khud /sitemap.xml aur /sitemaps/blog.xml Google ko de deta hai)*
    *(pehle wali row delete karna zaroori nahi — Google khud re-fetch karega, par fresh submit foran queue karta hai)*
 3. **URL Inspection** → `https://mizanoraorg.web.app/` → **Request Indexing**
-4. 24–48 ghante me status **Success** + *discovered pages 16* dikhna chahiye
-   (5 core pages + blog list + 10 static articles)
+4. 24–48 ghante me status **Success** + *discovered pages 20* dikhna chahiye
+   (5 core pages + blog list + 14 static articles)
 
 > `rss.xml` sitemap ki tarah submit karein to bhi chalega (Google RSS 2.0 feeds accept karta hai).
+
+### IndexNow (Bing / Yandex — instant indexing)
+
+Two Google-only tak na rukein: har Firebase deploy ke baad
+`scripts/ping-indexnow.mjs` saare URLs `api.indexnow.org` par bhejta hai
+(key file: `8f3c1d7a94b25e6fa07c4d19b6e2a7f5.txt`).
+
+Bing Webmaster Tools me site add karein → **URL Submission → API** me IndexNow enable karein,
+aur Yandex Webmaster me bhi wahi key file verify ho jayegi.
 
 ### Live sanity check
 

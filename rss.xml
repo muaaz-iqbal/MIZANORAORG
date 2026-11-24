@@ -6,7 +6,7 @@
     <atom:link href="https://mizanoraorg.web.app/rss.xml" rel="self" type="application/rss+xml"/>
     <description>Mizanora Platform — Muaaz Iqbal ke projects, blogs aur updates.</description>
     <language>en-pk</language>
-    <lastBuildDate>Tue, 24 Nov 2026 10:02:26 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 16:27:18 GMT</lastBuildDate>
     <item>
       <title>Kya Hua: GitHub Account Suspension — Poori Kahani</title>
       <link>https://mizanoraorg.web.app/blog/github-suspension-incident-2026.html</link>
@@ -78,6 +78,42 @@
       <category>Guide</category>
       <description>Na laptop, na bootcamp, na English perfection — sirf ek sasta phone aur zabardast zid. Wo 5 sabaq jo 90 repos banane ke baad samajh aaye.</description>
       <media:content url="https://mizanoraorg.web.app/assets/img/blog/founder.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>Mizanora Store: 11,000+ Products Kaise Manage Hote Hain</title>
+      <link>https://mizanoraorg.web.app/blog/mizanora-store-11000-products.html</link>
+      <guid isPermaLink="true">https://mizanoraorg.web.app/blog/mizanora-store-11000-products.html</guid>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Commerce</category>
+      <description>11,000+ products, flat delivery aur cash on delivery — lekin asli kaam catalog ke peeche hai: duplicates, dead stock, aur honest pricing.</description>
+      <media:content url="https://mizanoraorg.web.app/assets/img/blog/market.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>BarakatWave TV: 800 Channels, Ek Browser</title>
+      <link>https://mizanoraorg.web.app/blog/barakatwave-800-channels.html</link>
+      <guid isPermaLink="true">https://mizanoraorg.web.app/blog/barakatwave-800-channels.html</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Streaming</category>
+      <description>800 live channels, multi-server failover, IMDb cinema aur free Xtream server — sab browser me, bina app install.</description>
+      <media:content url="https://mizanoraorg.web.app/assets/img/blog/livetv.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>GitHub Account Suspend? Appeal Aur Recovery Ka Tareeqa</title>
+      <link>https://mizanoraorg.web.app/blog/github-appeal-recovery-guide.html</link>
+      <guid isPermaLink="true">https://mizanoraorg.web.app/blog/github-appeal-recovery-guide.html</guid>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Guide</category>
+      <description>Account suspend ho gaya — 90 repos 404. Practical checklist: appeal kaise likhein, kya bachaya ja sakta hai, aur dobara aisa na ho.</description>
+      <media:content url="https://mizanoraorg.web.app/assets/img/blog/recovery.jpg" medium="image"/>
+    </item>
+    <item>
+      <title>Asaan Lang Se HTML Website — Web Compiler Kaise Kaam Karta Hai</title>
+      <link>https://mizanoraorg.web.app/blog/asaan-lang-web-compiler.html</link>
+      <guid isPermaLink="true">https://mizanoraorg.web.app/blog/asaan-lang-web-compiler.html</guid>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 GMT</pubDate>
+      <category>Language</category>
+      <description>Ek command me Roman-Urdu code se poori HTML website — lexer se codegen tak, sab kuch samjhaya hua.</description>
+      <media:content url="https://mizanoraorg.web.app/assets/img/blog/web-compiler.jpg" medium="image"/>
     </item>
     <item>
       <title>Muaaz Iqbal: Kasur Se Mizanora Tak</title>
