@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://mizanoraorg.web.app/blog.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/github-suspension-incident-2026.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/incident.jpg</image:loc>
+      <image:title>Kya Hua: GitHub Account Suspension — Poori Kahani</image:title>
+      <image:caption>2–3 saal ki mehnat, 90 repos — ek hi jhatke me 404. Kya hua, kyun hua, aur ab kya kar rahe hain.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/backup-guide-2026.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/backup.jpg</image:loc>
+      <image:title>Har Project Ka Backup: Zaroori Guide</image:title>
+      <image:caption>Ek account suspend — saari mehnat gayab. Aisa na ho, isliye ye backup routine apnayein.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/platform-v2-live.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/og-cover.jpg</image:loc>
+      <image:title>Platform v2 Live: Naya Mark, 10 Blogs, Dual Hosting</image:title>
+      <image:caption>Mizanora Platform ka bara upgrade — official gold mark, generated covers, 5 naye blogs, auto sitemap aur Firebase Hosting + GitHub Pages dono par live.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/firebase-hosting-dual-deploy.html</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/hosting.jpg</image:loc>
+      <image:title>Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar</image:title>
+      <image:caption>Ek hi static codebase ko GitHub Pages aur Firebase Hosting dono par deploy karna — bilkul free, bina VPS, bina bill ka darr.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/noor-ai-urdu-first-assistant.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/noor-ai.jpg</image:loc>
+      <image:title>Noor AI: Urdu-First Assistant Kaise Sochta Hai</image:title>
+      <image:caption>&#39;Sasta laal joota under 2k&#39; — aisa messy Urdu sentence samajhna, keyword search se nahi hota. Noor AI ke design ke teen asool.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/mizanora-ecosystem-map.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/ecosystem.jpg</image:loc>
+      <image:title>Mizanora Ecosystem: Her Project Ka Naqsha</image:title>
+      <image:caption>Mizanora kya hai? Store, language, TV, AI, trading, Islamic tools — poora naqsha ek jagah.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/iptv-reseller-suite-v6.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/streaming.jpg</image:loc>
+      <image:title>IPTV Reseller Suite v6.1.2 — Owner Se Client Tak Ka Safar</image:title>
+      <image:caption>3-level economy: owner control → reseller workspace → client service. 183+ integration tests, signed playback, MAG/Stalker support.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/naye-developers-ke-liye-5-sabaq.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/founder.jpg</image:loc>
+      <image:title>Naye Developers Ke Liye 5 Sabaq — Saste Phone Se Shuru</image:title>
+      <image:caption>Na laptop, na bootcamp, na English perfection — sirf ek sasta phone aur zabardast zid. Wo 5 sabaq jo 90 repos banane ke baad samajh aaye.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/founder-story-muaaz-iqbal.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/founder.jpg</image:loc>
+      <image:title>Muaaz Iqbal: Kasur Se Mizanora Tak</image:title>
+      <image:caption>2009 me paida hone wale ek larkay ne saste phone par duniya bhar ke platforms banaye. &#39;Unchi soch. Chhote qadam.&#39;</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mizanoraorg.web.app/blog/asaan-lang-intro.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mizanoraorg.web.app/assets/img/blog/asaan-lang.jpg</image:loc>
+      <image:title>Asaan Lang: Soch Urdu Mein, Code Roman-Urdu Mein</image:title>
+      <image:caption>Pakistan ki apni programming language — 30 second me samjhein, phir khud likhein.</image:caption>
+    </image:image>
+  </url>
+</urlset>

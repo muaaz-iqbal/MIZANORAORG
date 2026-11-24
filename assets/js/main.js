@@ -5,6 +5,9 @@ import { Store } from "./store.js";
 
 const MZ = window.MZ;
 
+/* pages live at /, but generated articles live at /blog/<slug>.html */
+const R = location.pathname.includes("/blog/") ? "../" : "";
+
 /* ---------- utils ---------- */
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
@@ -67,19 +70,19 @@ function injectChrome() {
     ["about.html", "About Muaaz", "about"]
   ];
   const nav = links.map(([href, label, key]) =>
-    `<a href="${href}" class="${page === key ? "active" : ""}">${label}</a>`).join("");
+    `<a href="${R}${href}" class="${page === key ? "active" : ""}">${label}</a>`).join("");
 
   const header = $("#site-header");
   if (header) header.innerHTML = `
     <div class="container nav-row">
-      <a class="brand" href="index.html">
-        <div class="brand-logo"><img src="assets/img/logo-64.png" width="38" height="38" alt="Mizanora logo" decoding="async"></div>
+      <a class="brand" href="${R}index.html">
+        <div class="brand-logo"><img src="${R}assets/img/logo-64.png" width="38" height="38" alt="Mizanora logo" decoding="async"></div>
         <div>Mizanora<small>Platform · Muaaz Iqbal</small></div>
       </a>
       <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
       <nav class="nav-links">
         ${nav}
-        <a href="admin.html" class="nav-cta">Admin Panel</a>
+        <a href="${R}admin.html" class="nav-cta">Admin Panel</a>
       </nav>
     </div>`;
 
@@ -88,17 +91,17 @@ function injectChrome() {
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h4 class="foot-brand"><img src="assets/img/logo-64.png" width="24" height="24" alt="" aria-hidden="true"> Mizanora Platform</h4>
+          <h4 class="foot-brand"><img src="${R}assets/img/logo-64.png" width="24" height="24" alt="" aria-hidden="true"> Mizanora Platform</h4>
           <p>Mizan (balance) + Noor (illumination). Pakistan-based digital infrastructure, halal e-commerce aur ethical AI — founded by <b>Muaaz Iqbal</b>, Kasur, Punjab.</p>
           <p>“Unchi soch. Chhote qadam.”</p>
         </div>
         <div>
           <h4>Pages</h4>
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="blog.html">Blog</a>
-          <a href="team.html">Team</a>
-          <a href="about.html">About Muaaz Iqbal</a>
+          <a href="${R}index.html">Home</a>
+          <a href="${R}projects.html">Projects</a>
+          <a href="${R}blog.html">Blog</a>
+          <a href="${R}team.html">Team</a>
+          <a href="${R}about.html">About Muaaz Iqbal</a>
         </div>
         <div>
           <h4>Ecosystem</h4>
@@ -117,7 +120,7 @@ function injectChrome() {
       </div>
       <div class="footer-bottom">
         <span>© ${new Date().getFullYear()} Mizanora · Kasur, Punjab, Pakistan. Built & maintained by Muaaz Iqbal.</span>
-        <span>Mode: <b id="store-mode">…</b> · <a href="sitemap.xml">sitemap</a> · <a href="rss.xml">rss</a> · <a href="llms.txt">llms.txt</a> · <a href="admin.html">admin</a></span>
+        <span>Mode: <b id="store-mode">…</b> · <a href="${R}sitemap.xml">sitemap</a> · <a href="${R}rss.xml">rss</a> · <a href="${R}llms.txt">llms.txt</a> · <a href="${R}admin.html">admin</a></span>
       </div>
     </div>`;
 }
@@ -200,7 +203,7 @@ function projectCardHTML(p) {
 
 function blogCardHTML(b) {
   return `
-    <div class="card blog-card" data-slug="${esc(b.slug)}">
+    <div class="card blog-card" data-slug="${esc(b.slug)}" data-href="${R}blog/${esc(b.slug)}.html">
       <div class="blog-cover">
         ${b.cover
           ? `<img src="${esc(b.cover)}" alt="${esc(b.title)}" loading="lazy" decoding="async">`
@@ -222,7 +225,10 @@ function bindProjectCards() {
 }
 function bindBlogCards() {
   $$(".blog-card").forEach(card => {
-    card.addEventListener("click", () => { location.href = `blog.html?slug=${encodeURIComponent(card.dataset.slug)}`; });
+    card.addEventListener("click", () => {
+      if (card.tagName === "A" && card.getAttribute("href")) return; // static article link
+      location.href = card.dataset.href || `${R}blog/${encodeURIComponent(card.dataset.slug)}.html`;
+    });
   });
 }
 
@@ -311,7 +317,7 @@ async function renderBlog() {
         <h1 style="text-align:center;font-size:clamp(1.8rem,4vw,2.7rem);margin:14px 0 30px">${esc(b.title)}</h1>
         <div class="article-body">${md(b.content)}</div>
         <div class="chips" style="justify-content:center;margin:30px 0">${(b.tags || []).map(t => `<span class="chip">#${esc(t)}</span>`).join("")}</div>
-        <div style="text-align:center"><a class="btn btn-ghost" href="blog.html">← Sab blogs</a></div>`;
+        <div style="text-align:center"><a class="btn btn-ghost" href="${R}blog.html">← Sab blogs</a></div>`;
       return;
     }
   }

@@ -21,6 +21,19 @@
     "trailingSlash": false,
     "headers": [
       {
+        "source": "**/*.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml; charset=utf-8"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=600"
+          }
+        ]
+      },
+      {
         "source": "**/*.@(css|js|svg|png|jpg|jpeg|webp|ico|woff|woff2)",
         "headers": [
           {

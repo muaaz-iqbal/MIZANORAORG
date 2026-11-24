@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar — Mizanora Blog | Muaaz Iqbal</title>
+  <meta name="description" content="Ek hi static codebase ko GitHub Pages aur Firebase Hosting dono par deploy karna — bilkul free, bina VPS, bina bill ka darr.">
+  <meta name="keywords" content="firebase, hosting, github-pages, devops">
+  <meta name="author" content="Muaaz Iqbal">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://mizanoraorg.web.app/blog/firebase-hosting-dual-deploy.html">
+  <meta name="google-site-verification" content="PiedLWGigl4PJjb1sUkoYc7PjDy9AjBX02JwfnO1gZg">
+  <meta name="google-site-verification" content="jSBcl9CFtpuhhe3M778hOM3bGz0DvpJ3K0DLpJNP2CM">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mizanora Platform">
+  <meta property="og:title" content="Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar">
+  <meta property="og:description" content="Ek hi static codebase ko GitHub Pages aur Firebase Hosting dono par deploy karna — bilkul free, bina VPS, bina bill ka darr.">
+  <meta property="og:url" content="https://mizanoraorg.web.app/blog/firebase-hosting-dual-deploy.html">
+  <meta property="og:locale" content="en_PK">
+  <meta property="og:image" content="https://mizanoraorg.web.app/assets/img/blog/hosting.jpg">
+  <meta property="og:image:alt" content="Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar">
+  <meta property="article:published_time" content="2026-11-22">
+  <meta property="article:section" content="Infra">
+  <meta property="article:tag" content="firebase">
+  <meta property="article:tag" content="hosting">
+  <meta property="article:tag" content="github-pages">
+  <meta property="article:tag" content="devops">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar">
+  <meta name="twitter:description" content="Ek hi static codebase ko GitHub Pages aur Firebase Hosting dono par deploy karna — bilkul free, bina VPS, bina bill ka darr.">
+  <meta name="twitter:image" content="https://mizanoraorg.web.app/assets/img/blog/hosting.jpg">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://mizanoraorg.web.app/blog/firebase-hosting-dual-deploy.html#article",
+      "headline": "Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar",
+      "description": "Ek hi static codebase ko GitHub Pages aur Firebase Hosting dono par deploy karna — bilkul free, bina VPS, bina bill ka darr.",
+      "datePublished": "2026-11-22",
+      "dateModified": "2026-11-22",
+      "author": {
+        "@type": "Person",
+        "name": "Muaaz Iqbal",
+        "url": "https://mizanoraorg.web.app/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mizanora",
+        "url": "https://mizanoraorg.web.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mizanoraorg.web.app/assets/img/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": "https://mizanoraorg.web.app/blog/firebase-hosting-dual-deploy.html",
+      "image": [
+        "https://mizanoraorg.web.app/assets/img/blog/hosting.jpg"
+      ],
+      "articleSection": "Infra",
+      "keywords": "firebase, hosting, github-pages, devops",
+      "inLanguage": "en-PK"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mizanoraorg.web.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://mizanoraorg.web.app/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar",
+          "item": "https://mizanoraorg.web.app/blog/firebase-hosting-dual-deploy.html"
+        }
+      ]
+    }
+  ]
+}</script>
+  <!-- Branding / icons -->
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#060d0a">
+  <link rel="alternate" type="application/rss+xml" title="Mizanora Blog RSS" href="../rss.xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/enhance.css">
+</head>
+<body data-page="article">
+  <div class="aurora"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="site-header" id="site-header"></header>
+
+  <main class="section">
+    <div class="container" style="max-width:920px">
+      <nav aria-label="Breadcrumb" style="font-size:.8rem;color:var(--muted);margin-bottom:18px">
+        <a href="../index.html">Home</a> ›
+        <a href="../blog.html">Blog</a> ›
+        <span>Infra</span>
+      </nav>
+
+      <article id="blog-article">
+        <figure class="article-cover"><img src="../assets/img/blog/hosting.jpg" alt="Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar" fetchpriority="high" decoding="async"></figure>
+        <div class="blog-meta" style="justify-content:center">
+          <span class="badge badge-gold">tutorial</span>
+          <span>22 Nov 2026</span><span>· Muaaz Iqbal</span>
+          <span>· Infra</span>
+        </div>
+        <h1 style="text-align:center;font-size:clamp(1.8rem,4vw,2.7rem);margin:14px 0 30px">Firebase Hosting + GitHub Pages: Ek Codebase, Do Ghar</h1>
+        <div class="article-body"><h2>Kyun do jagah?</h2>
+<p>November 2026 ka sabaq: <strong>ek platform par sab kuch nahi</strong>. GitHub account suspend ho sakta hai, Vercel bill 402 de sakta hai. Isliye site ka source git me, aur deploy <strong>do independent hosts</strong> par.</p>
+<h2>Setup (3 files)</h2>
+<table><thead><tr><th>File</th><th>Kaam</th></tr></thead><tbody><tr><td><code>firebase.json</code></td><td><code>public: &quot;.&quot;</code>, ignore list, cache + security headers</td></tr><tr><td><code>.firebaserc</code></td><td>default project ka naam</td></tr><tr><td><code>.github/workflows/deploy-firebase.yml</code></td><td>push par live channel deploy</td></tr></tbody></table>
+<h2>Headers jo farq daalte hain</h2>
+<pre><code>&quot;headers&quot;: [
+  { &quot;source&quot;: &quot;*<em>/</em>.@(css|js|jpg|png|svg)&quot;, &quot;headers&quot;: [{ &quot;key&quot;: &quot;Cache-Control&quot;, &quot;value&quot;: &quot;public, max-age=604800&quot; }] },
+  { &quot;source&quot;: &quot;*<em>/</em>.@(html|json|xml)&quot;, &quot;headers&quot;: [{ &quot;key&quot;: &quot;Cache-Control&quot;, &quot;value&quot;: &quot;public, max-age=300&quot; }] }
+]</code></pre>
+<p>Assets ko hafta bhar cache, HTML ko 5 minute — isi liye site <strong>fast</strong> bhi lagti hai aur update bhi foran dikhta hai.</p>
+<h2>CI me credentials</h2>
+<p>1. Firebase Console → <em>Project settings → Service accounts</em> → <strong>Generate new private key</strong><br>2. GitHub repo → <em>Settings → Secrets</em> → <code>FIREBASE_SERVICE_ACCOUNT</code> = poora JSON<br>3. Workflow khud <code>live</code> channel par deploy kar dega</p>
+<h2>Preview channels (bonus)</h2>
+<p>Har pull request ke liye temporary URL:</p>
+<pre><code>firebase hosting:channel:deploy pr-12 --expires 7d</code></pre>
+<p>Client ko preview dikhana ho ya design compare karna ho — production ko chhue baghair.</p>
+<h2>Manual deploy</h2>
+<pre><code>npm i -g firebase-tools
+firebase login
+firebase use mizanoraorg
+firebase deploy --only hosting,firestore:rules</code></pre>
+<blockquote>Rule: jo bhi deploy ho, <strong>source git me</strong> ho. Host badal sakta hai, history nahi.</blockquote></div>
+        <div class="chips" style="justify-content:center;margin:30px 0"><span class="chip">#firebase</span><span class="chip">#hosting</span><span class="chip">#github-pages</span><span class="chip">#devops</span></div>
+        <div style="text-align:center"><a class="btn btn-ghost" href="../blog.html">← Sab blogs</a></div>
+      </article>
+
+      <section style="margin-top:50px">
+        <div class="section-head"><div><div class="kicker">Parhein bhi</div><h2 style="font-size:1.4rem">Mazeed articles</h2></div></div>
+        <div class="grid">
+          <a class="card blog-card" href="./github-suspension-incident-2026.html">
+            <div class="blog-cover"><img src="../assets/img/blog/incident.jpg" alt="Kya Hua: GitHub Account Suspension — Poori Kahani" loading="lazy" decoding="async"></div>
+            <div class="blog-meta"><span class="badge badge-gold">news</span><span>23 Nov 2026</span></div>
+            <div class="blog-title-link">Kya Hua: GitHub Account Suspension — Poori Kahani</div>
+          </a>
+          <a class="card blog-card" href="./backup-guide-2026.html">
+            <div class="blog-cover"><img src="../assets/img/blog/backup.jpg" alt="Har Project Ka Backup: Zaroori Guide" loading="lazy" decoding="async"></div>
+            <div class="blog-meta"><span class="badge badge-gold">tutorial</span><span>23 Nov 2026</span></div>
+            <div class="blog-title-link">Har Project Ka Backup: Zaroori Guide</div>
+          </a>
+          <a class="card blog-card" href="./platform-v2-live.html">
+            <div class="blog-cover"><img src="../assets/img/og-cover.jpg" alt="Platform v2 Live: Naya Mark, 10 Blogs, Dual Hosting" loading="lazy" decoding="async"></div>
+            <div class="blog-meta"><span class="badge badge-gold">news</span><span>23 Nov 2026</span></div>
+            <div class="blog-title-link">Platform v2 Live: Naya Mark, 10 Blogs, Dual Hosting</div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script type="module" src="../assets/js/main.js"></script>
+  <script src="../assets/js/enhance.js" defer></script>
+</body>
+</html>

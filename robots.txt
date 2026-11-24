@@ -18,4 +18,6 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+# Submit the index — it lists /sitemap.xml and /sitemaps/blog.xml
+Sitemap: https://mizanoraorg.web.app/sitemap-index.xml
 Sitemap: https://mizanoraorg.web.app/sitemap.xml
